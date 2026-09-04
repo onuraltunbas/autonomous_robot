@@ -22,7 +22,7 @@ setup(
     entry_points={
         'console_scripts': [
             'bridge_node = autonomous_robot_bridge.bridge_node:main',
-            'sim_mock_node = autonomous_robot_bridge.sim_mock_node:main',
+            'teleop_robot = autonomous_robot_bridge.teleop_robot:main',
         ],
     },
 )
