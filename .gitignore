@@ -1,0 +1,19 @@
+# ROS 2 build artifacts
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Unreal Engine project temporary files
+*.sln
+*.suo
+.vs/
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+Build/
