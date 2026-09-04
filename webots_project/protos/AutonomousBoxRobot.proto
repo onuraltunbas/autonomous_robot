@@ -1,0 +1,350 @@
+#VRML_SIM R2025a utf8
+# Autonomous Box Robot 4WD Simulation Model (20x20x5 cm)
+# Equipped with 720p Camera, 4x HC-SR04 Sonars, 4WD DC Motors, OLED Display
+
+PROTO AutonomousBoxRobot [
+  field SFVec3f    translation 0 0 0.045
+  field SFRotation rotation    0 0 1 0
+  field SFString   name        "AutonomousBoxRobot"
+  field SFString   controller  "robot_ros2_controller"
+  field MFString   controllerArgs []
+  field SFBool     synchronization TRUE
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    controller IS controller
+    controllerArgs IS controllerArgs
+    synchronization IS synchronization
+    children [
+      # CHASSIS BODY (20cm x 20cm x 5cm)
+      Pose {
+        translation 0 0 0
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.18 0.18 0.20
+              roughness 0.6
+              metalness 0.2
+            }
+            geometry Box {
+              size 0.20 0.20 0.05
+            }
+          }
+        ]
+      }
+
+      # 4x HC-SR04 ULTRASONIC SENSORS (Center mounted, facing 4 directions)
+      # Sonar Center Hub
+      Pose {
+        translation 0 0 0.03
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+            }
+            geometry Box {
+              size 0.04 0.04 0.01
+            }
+          }
+        ]
+      }
+      # 1. Front Sonar (+X, 0 deg)
+      DistanceSensor {
+        translation 0.025 0 0.035
+        rotation 0 0 1 0
+        name "sonar_front"
+        lookupTable [
+          0 0 0
+          4 4 0
+        ]
+        type "sonar"
+        numberOfRays 5
+        aperture 0.52
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.05 0.35 0.85
+            }
+            geometry Box {
+              size 0.015 0.045 0.020
+            }
+          }
+        ]
+      }
+      # 2. Left Sonar (+Y, 90 deg)
+      DistanceSensor {
+        translation 0 0.025 0.035
+        rotation 0 0 1 1.570796
+        name "sonar_left"
+        lookupTable [
+          0 0 0
+          4 4 0
+        ]
+        type "sonar"
+        numberOfRays 5
+        aperture 0.52
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.05 0.35 0.85
+            }
+            geometry Box {
+              size 0.015 0.045 0.020
+            }
+          }
+        ]
+      }
+      # 3. Back Sonar (-X, 180 deg)
+      DistanceSensor {
+        translation -0.025 0 0.035
+        rotation 0 0 1 3.141592
+        name "sonar_back"
+        lookupTable [
+          0 0 0
+          4 4 0
+        ]
+        type "sonar"
+        numberOfRays 5
+        aperture 0.52
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.05 0.35 0.85
+            }
+            geometry Box {
+              size 0.015 0.045 0.020
+            }
+          }
+        ]
+      }
+      # 4. Right Sonar (-Y, -90 deg)
+      DistanceSensor {
+        translation 0 -0.025 0.035
+        rotation 0 0 1 -1.570796
+        name "sonar_right"
+        lookupTable [
+          0 0 0
+          4 4 0
+        ]
+        type "sonar"
+        numberOfRays 5
+        aperture 0.52
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.05 0.35 0.85
+            }
+            geometry Box {
+              size 0.015 0.045 0.020
+            }
+          }
+        ]
+      }
+
+      # 720P OPTIMAL WEBCAM (Front Edge, 7 deg tilted down)
+      Camera {
+        translation 0.085 0 0.055
+        rotation 0 1 0 0.12
+        name "camera"
+        fieldOfView 1.22
+        width 1280
+        height 720
+        children [
+          Pose {
+            translation 0 0 0
+            rotation 0 1 0 1.570796
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.1 0.1 0.1
+                }
+                geometry Cylinder {
+                  height 0.03
+                  radius 0.01
+                }
+              }
+            ]
+          }
+        ]
+      }
+
+      # NODEMCU OLED DISPLAY (On top chassis surface)
+      Display {
+        translation -0.05 0 0.026
+        name "oled_display"
+        width 128
+        height 64
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.0 0.7 0.9
+              emissiveColor 0.0 0.3 0.5
+            }
+            geometry Box {
+              size 0.04 0.04 0.002
+            }
+          }
+        ]
+      }
+
+      # 4WD WHEELS (Skid-Steer / Differential Drive)
+      # 1. Front Left Wheel
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis 0 1 0
+          anchor 0.060 0.1125 -0.0125
+        }
+        device [
+          RotationalMotor {
+            name "fl_motor"
+            maxVelocity 20.0
+          }
+        ]
+        endPoint Solid {
+          translation 0.060 0.1125 -0.0125
+          rotation 1 0 0 1.570796
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 0.9
+              }
+              geometry Cylinder {
+                height 0.025
+                radius 0.0325
+              }
+            }
+          ]
+          boundingObject Cylinder {
+            height 0.025
+            radius 0.0325
+          }
+          physics Physics {
+            mass 0.10
+          }
+        }
+      }
+
+      # 2. Front Right Wheel
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis 0 1 0
+          anchor 0.060 -0.1125 -0.0125
+        }
+        device [
+          RotationalMotor {
+            name "fr_motor"
+            maxVelocity 20.0
+          }
+        ]
+        endPoint Solid {
+          translation 0.060 -0.1125 -0.0125
+          rotation 1 0 0 1.570796
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 0.9
+              }
+              geometry Cylinder {
+                height 0.025
+                radius 0.0325
+              }
+            }
+          ]
+          boundingObject Cylinder {
+            height 0.025
+            radius 0.0325
+          }
+          physics Physics {
+            mass 0.10
+          }
+        }
+      }
+
+      # 3. Rear Left Wheel
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis 0 1 0
+          anchor -0.060 0.1125 -0.0125
+        }
+        device [
+          RotationalMotor {
+            name "rl_motor"
+            maxVelocity 20.0
+          }
+        ]
+        endPoint Solid {
+          translation -0.060 0.1125 -0.0125
+          rotation 1 0 0 1.570796
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 0.9
+              }
+              geometry Cylinder {
+                height 0.025
+                radius 0.0325
+              }
+            }
+          ]
+          boundingObject Cylinder {
+            height 0.025
+            radius 0.0325
+          }
+          physics Physics {
+            mass 0.10
+          }
+        }
+      }
+
+      # 4. Rear Right Wheel
+      HingeJoint {
+        jointParameters HingeJointParameters {
+          axis 0 1 0
+          anchor -0.060 -0.1125 -0.0125
+        }
+        device [
+          RotationalMotor {
+            name "rr_motor"
+            maxVelocity 20.0
+          }
+        ]
+        endPoint Solid {
+          translation -0.060 -0.1125 -0.0125
+          rotation 1 0 0 1.570796
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 0.9
+              }
+              geometry Cylinder {
+                height 0.025
+                radius 0.0325
+              }
+            }
+          ]
+          boundingObject Cylinder {
+            height 0.025
+            radius 0.0325
+          }
+          physics Physics {
+            mass 0.10
+          }
+        }
+      }
+    ]
+    boundingObject Box {
+      size 0.20 0.20 0.05
+    }
+    physics Physics {
+      density -1
+      mass 1.20
+    }
+  }
+}
