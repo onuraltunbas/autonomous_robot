@@ -4,12 +4,11 @@ from rclpy.node import Node
 from rclpy.qos import QoSProfile, ReliabilityPolicy, HistoryPolicy
 from geometry_msgs.msg import Twist, TransformStamped
 from nav_msgs.msg import Odometry
-from sensor_msgs.msg import Range, Image, CameraInfo
+from sensor_msgs.msg import Range, Image, CameraInfo, JointState
 from std_msgs.msg import String
 import tf2_ros
 
 import socket
-import select
 import threading
 import json
 import struct
@@ -31,6 +30,7 @@ class UnrealROSBridgeNode(Node):
 
         # Publishers
         self.odom_pub = self.create_publisher(Odometry, '/odom', 10)
+        self.joint_pub = self.create_publisher(JointState, '/joint_states', 10)
         self.image_pub = self.create_publisher(Image, '/camera/image_raw', 10)
         self.camera_info_pub = self.create_publisher(CameraInfo, '/camera/camera_info', 10)
         
@@ -40,6 +40,12 @@ class UnrealROSBridgeNode(Node):
         self.sonar_right_pub = self.create_publisher(Range, '/sensors/sonar_right', 10)
 
         self.oled_pub = self.create_publisher(String, '/nodemcu/oled_status', 10)
+
+        # Wheel joint positions for dynamic animation in RViz / TF
+        self.wheel_angle_l = 0.0
+        self.wheel_angle_r = 0.0
+        self.wheel_radius = 0.0325
+        self.track_width = 0.225
 
         # Subscribers
         self.cmd_vel_sub = self.create_subscription(
@@ -52,6 +58,9 @@ class UnrealROSBridgeNode(Node):
         self.latest_cmd_vel = {'vx': 0.0, 'wz': 0.0}
         self.client_socket = None
         self.running = True
+
+        # Joint state periodic timer (30 Hz)
+        self.create_timer(0.033, self.publish_joint_states)
 
         # Start TCP server thread
         self.server_thread = threading.Thread(target=self.run_tcp_server, daemon=True)
@@ -72,6 +81,33 @@ class UnrealROSBridgeNode(Node):
             except Exception as e:
                 self.get_logger().warn(f'Failed to send cmd_vel to Unreal: {e}')
                 self.client_socket = None
+
+    def publish_joint_states(self):
+        vx = self.latest_cmd_vel['vx']
+        wz = self.latest_cmd_vel['wz']
+        dt = 0.033
+
+        # Integrate wheel rotation angles
+        v_left = vx - wz * (self.track_width / 2.0)
+        v_right = vx + wz * (self.track_width / 2.0)
+        self.wheel_angle_l = (self.wheel_angle_l + (v_left / self.wheel_radius) * dt) % (2 * np.pi)
+        self.wheel_angle_r = (self.wheel_angle_r + (v_right / self.wheel_radius) * dt) % (2 * np.pi)
+
+        js = JointState()
+        js.header.stamp = self.get_clock().now().to_msg()
+        js.name = [
+            'wheel_front_left_joint',
+            'wheel_front_right_joint',
+            'wheel_rear_left_joint',
+            'wheel_rear_right_joint'
+        ]
+        js.position = [
+            float(self.wheel_angle_l),
+            float(self.wheel_angle_r),
+            float(self.wheel_angle_l),
+            float(self.wheel_angle_r)
+        ]
+        self.joint_pub.publish(js)
 
     def run_tcp_server(self):
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -94,7 +130,6 @@ class UnrealROSBridgeNode(Node):
         buffer = bytearray()
         while self.running:
             try:
-                # Read packet length header (4 bytes)
                 data = client.recv(65536)
                 if not data:
                     break
@@ -103,7 +138,7 @@ class UnrealROSBridgeNode(Node):
                 while len(buffer) >= 4:
                     payload_len = struct.unpack('>I', buffer[:4])[0]
                     if len(buffer) < 4 + payload_len:
-                        break  # Wait for full payload
+                        break
 
                     payload = bytes(buffer[4:4 + payload_len])
                     buffer = buffer[4 + payload_len:]
@@ -120,9 +155,7 @@ class UnrealROSBridgeNode(Node):
 
     def process_unreal_payload(self, payload: bytes):
         try:
-            # Check if binary camera frame or JSON telemetry
             if payload.startswith(b'IMG:'):
-                # Format: IMG:timestamp:JPEG_DATA
                 colon_idx = payload.find(b':', 4)
                 img_data = payload[colon_idx + 1:]
                 np_arr = np.frombuffer(img_data, np.uint8)
@@ -134,7 +167,6 @@ class UnrealROSBridgeNode(Node):
                     ros_img.header.frame_id = 'camera_optical_link'
                     self.image_pub.publish(ros_img)
 
-                    # Camera info
                     cam_info = CameraInfo()
                     cam_info.header = ros_img.header
                     cam_info.width = 1280
@@ -157,7 +189,6 @@ class UnrealROSBridgeNode(Node):
                 vx = odom_data.get('vx', 0.0)
                 wz = odom_data.get('wz', 0.0)
 
-                # Broadcast TF: odom -> base_footprint
                 t = TransformStamped()
                 t.header.stamp = now
                 t.header.frame_id = 'odom'
@@ -172,7 +203,6 @@ class UnrealROSBridgeNode(Node):
                 t.transform.rotation.w = float(qw)
                 self.tf_broadcaster.sendTransform(t)
 
-                # Publish /odom
                 odom_msg = Odometry()
                 odom_msg.header.stamp = now
                 odom_msg.header.frame_id = 'odom'
@@ -207,7 +237,7 @@ class UnrealROSBridgeNode(Node):
         r.header.stamp = stamp
         r.header.frame_id = frame_id
         r.radiation_type = Range.ULTRASOUND
-        r.field_of_view = 0.523599  # 30 deg in radians
+        r.field_of_view = 0.523599
         r.min_range = 0.02
         r.max_range = 4.00
         r.range = float(np.clip(distance_m, 0.02, 4.00))
