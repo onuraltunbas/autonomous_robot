@@ -1,0 +1,58 @@
+[1.137s] Invoking command in '/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_tiago': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_control/lib:/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/build/webots_ros2_tiago/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/onur/autonomous_robot/install/webots_ros2_tiago/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/webots_ros2_tiago build --build-base /home/onur/autonomous_robot/build/webots_ros2_tiago/build install --record /home/onur/autonomous_robot/build/webots_ros2_tiago/install.log --install-scripts $base/lib/webots_ros2_tiago --single-version-externally-managed install_data
+[1.249s] /usr/lib/python3/dist-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[1.249s]   warnings.warn(msg)
+[1.272s] /usr/lib/python3/dist-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[1.272s] !!
+[1.272s] 
+[1.272s]         ********************************************************************************
+[1.272s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[1.272s] 
+[1.272s]         License :: OSI Approved :: Apache Software License
+[1.272s] 
+[1.272s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[1.273s]         ********************************************************************************
+[1.273s] 
+[1.273s] !!
+[1.273s]   self._finalize_license_expression()
+[1.319s] running egg_info
+[1.330s] creating ../../../build/webots_ros2_tiago/webots_ros2_tiago.egg-info
+[1.330s] writing ../../../build/webots_ros2_tiago/webots_ros2_tiago.egg-info/PKG-INFO
+[1.331s] writing dependency_links to ../../../build/webots_ros2_tiago/webots_ros2_tiago.egg-info/dependency_links.txt
+[1.331s] writing entry points to ../../../build/webots_ros2_tiago/webots_ros2_tiago.egg-info/entry_points.txt
+[1.331s] writing requirements to ../../../build/webots_ros2_tiago/webots_ros2_tiago.egg-info/requires.txt
+[1.331s] writing top-level names to ../../../build/webots_ros2_tiago/webots_ros2_tiago.egg-info/top_level.txt
+[1.331s] writing manifest file '../../../build/webots_ros2_tiago/webots_ros2_tiago.egg-info/SOURCES.txt'
+[1.344s] reading manifest file '../../../build/webots_ros2_tiago/webots_ros2_tiago.egg-info/SOURCES.txt'
+[1.344s] writing manifest file '../../../build/webots_ros2_tiago/webots_ros2_tiago.egg-info/SOURCES.txt'
+[1.344s] running build
+[1.345s] running install
+[1.348s] running install_data
+[1.348s] creating /home/onur/autonomous_robot/install/webots_ros2_tiago/share/ament_index/resource_index/packages
+[1.348s] copying resource/webots_ros2_tiago -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/ament_index/resource_index/packages
+[1.348s] creating /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/launch
+[1.348s] copying launch/robot_launch.py -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/launch
+[1.349s] copying launch/robot_bringup_launch.py -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/launch
+[1.349s] creating /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/resource
+[1.349s] copying resource/tiago_webots.urdf -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/resource
+[1.349s] copying resource/tiago_bringup_webots.urdf -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/resource
+[1.349s] copying resource/ros2_control.yml -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/resource
+[1.349s] copying resource/ros2_control_bringup.yml -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/resource
+[1.349s] copying resource/nav2_params.yaml -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/resource
+[1.349s] copying resource/nav2_params_iron.yaml -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/resource
+[1.349s] copying resource/default.rviz -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/resource
+[1.350s] copying resource/default_bringup.rviz -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/resource
+[1.350s] copying resource/map.pgm -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/resource
+[1.350s] copying resource/map.yaml -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/resource
+[1.350s] copying resource/cartographer.lua -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/resource
+[1.350s] copying resource/slam_toolbox_params.yaml -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/resource
+[1.350s] copying package.xml -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago
+[1.350s] creating /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/worlds
+[1.350s] copying worlds/default.wbt -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/worlds
+[1.350s] copying worlds/.default.wbproj -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/worlds
+[1.350s] copying worlds/default_bringup.wbt -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/worlds
+[1.350s] copying worlds/.default_bringup.wbproj -> /home/onur/autonomous_robot/install/webots_ros2_tiago/share/webots_ros2_tiago/worlds
+[1.350s] running install_egg_info
+[1.374s] Copying ../../../build/webots_ros2_tiago/webots_ros2_tiago.egg-info to /home/onur/autonomous_robot/install/webots_ros2_tiago/lib/python3.14/site-packages/webots_ros2_tiago-2025.0.1-py3.14.egg-info
+[1.374s] running install_scripts
+[1.434s] writing list of installed files to '/home/onur/autonomous_robot/build/webots_ros2_tiago/install.log'
+[1.464s] Invoked command in '/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_tiago' returned '0': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_control/lib:/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/build/webots_ros2_tiago/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/onur/autonomous_robot/install/webots_ros2_tiago/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/webots_ros2_tiago build --build-base /home/onur/autonomous_robot/build/webots_ros2_tiago/build install --record /home/onur/autonomous_robot/build/webots_ros2_tiago/install.log --install-scripts $base/lib/webots_ros2_tiago --single-version-externally-managed install_data

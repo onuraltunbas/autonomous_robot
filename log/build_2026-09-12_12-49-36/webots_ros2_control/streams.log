@@ -1,0 +1,105 @@
+[0.021s] Invoking command in '/home/onur/autonomous_robot/build/webots_ros2_control': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/opt/ros/lyrical/opt/sdformat_vendor:/opt/ros/lyrical/opt/gz_tools_vendor:/opt/ros/lyrical/opt/gz_math_vendor:/opt/ros/lyrical/opt/gz_utils_vendor:/opt/ros/lyrical/opt/gz_cmake_vendor:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/cmake /home/onur/autonomous_robot/src/webots_ros2/webots_ros2_control -DCMAKE_INSTALL_PREFIX=/home/onur/autonomous_robot/install/webots_ros2_control
+[0.332s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.332s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.332s]   CMake.
+[0.332s] 
+[0.332s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.332s]   to tell CMake that the project requires at least <min> but has been updated
+[0.332s]   to work with policies introduced by <max> or earlier.
+[0.332s] 
+[0.332s] [0m
+[0.332s] -- The C compiler identification is GNU 15.2.0
+[0.333s] -- The CXX compiler identification is GNU 15.2.0
+[0.333s] -- Detecting C compiler ABI info
+[0.333s] -- Detecting C compiler ABI info - done
+[0.333s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.333s] -- Detecting C compile features
+[0.333s] -- Detecting C compile features - done
+[0.333s] -- Detecting CXX compiler ABI info
+[0.333s] -- Detecting CXX compiler ABI info - done
+[0.333s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.333s] -- Detecting CXX compile features
+[0.333s] -- Detecting CXX compile features - done
+[0.333s] -- Found ament_cmake: 2.8.8 (/opt/ros/lyrical/share/ament_cmake/cmake)
+[0.506s] -- Found hardware_interface: 6.9.0 (/opt/ros/lyrical/share/hardware_interface/cmake)
+[0.535s] -- Found rosidl_generator_c: 5.2.1 (/opt/ros/lyrical/share/rosidl_generator_c/cmake)
+[0.541s] -- Found rosidl_generator_cpp: 5.2.1 (/opt/ros/lyrical/share/rosidl_generator_cpp/cmake)
+[0.552s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.562s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.779s] -- Found rmw_implementation_cmake: 7.10.1 (/opt/ros/lyrical/share/rmw_implementation_cmake/cmake)
+[0.781s] -- Found rmw_fastrtps_cpp: 9.4.9 (/opt/ros/lyrical/share/rmw_fastrtps_cpp/cmake)
+[0.804s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.956s] [33mCMake Warning (dev) at /opt/ros/lyrical/share/realtime_tools/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package):
+[0.956s]   Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+[0.956s]   --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+[0.956s]   set the policy and suppress this warning.
+[0.956s] 
+[0.956s] Call Stack (most recent call first):
+[0.956s]   /opt/ros/lyrical/share/realtime_tools/cmake/realtime_toolsConfig.cmake:41 (include)
+[0.956s]   /opt/ros/lyrical/share/hardware_interface/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[0.957s]   /opt/ros/lyrical/share/hardware_interface/cmake/hardware_interfaceConfig.cmake:41 (include)
+[0.957s]   CMakeLists.txt:31 (find_package)
+[0.957s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.957s] [0m
+[1.019s] -- Found controller_manager: 6.9.0 (/opt/ros/lyrical/share/controller_manager/cmake)
+[1.076s] -- Found webots_ros2_driver: 2025.0.1 (/home/onur/autonomous_robot/install/webots_ros2_driver/share/webots_ros2_driver/cmake)
+[1.173s] [0mCMake Deprecation Warning at /opt/ros/lyrical/share/tinyxml2_vendor/cmake/tinyxml2_vendorConfig.cmake:34 (message):
+[1.173s]   Package 'tinyxml2_vendor' is deprecated (This package will be removed in
+[1.173s]   ROS 2 Lyrical Luth.  Instead, use
+[1.173s] 
+[1.173s]         distributed package which provides same functionality.)
+[1.173s] Call Stack (most recent call first):
+[1.173s]   /home/onur/autonomous_robot/install/webots_ros2_driver/share/webots_ros2_driver/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.173s]   /home/onur/autonomous_robot/install/webots_ros2_driver/share/webots_ros2_driver/cmake/webots_ros2_driverConfig.cmake:41 (include)
+[1.173s]   CMakeLists.txt:36 (find_package)
+[1.173s] 
+[1.173s] [0m
+[1.252s] -- Configuring done (1.2s)
+[1.278s] -- Generating done (0.0s)
+[1.320s] -- Build files have been written to: /home/onur/autonomous_robot/build/webots_ros2_control
+[1.329s] Invoked command in '/home/onur/autonomous_robot/build/webots_ros2_control' returned '0': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/opt/ros/lyrical/opt/sdformat_vendor:/opt/ros/lyrical/opt/gz_tools_vendor:/opt/ros/lyrical/opt/gz_math_vendor:/opt/ros/lyrical/opt/gz_utils_vendor:/opt/ros/lyrical/opt/gz_cmake_vendor:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/cmake /home/onur/autonomous_robot/src/webots_ros2/webots_ros2_control -DCMAKE_INSTALL_PREFIX=/home/onur/autonomous_robot/install/webots_ros2_control
+[1.330s] Invoking command in '/home/onur/autonomous_robot/build/webots_ros2_control': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/opt/ros/lyrical/opt/sdformat_vendor:/opt/ros/lyrical/opt/gz_tools_vendor:/opt/ros/lyrical/opt/gz_math_vendor:/opt/ros/lyrical/opt/gz_utils_vendor:/opt/ros/lyrical/opt/gz_cmake_vendor:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/onur/autonomous_robot/build/webots_ros2_control -- -j16 -l16
+[1.373s] [ 25%] [32mBuilding CXX object CMakeFiles/webots_ros2_control_system.dir/src/Ros2ControlSystem.cpp.o[0m
+[1.374s] [ 50%] [32mBuilding CXX object CMakeFiles/webots_ros2_control.dir/src/Ros2Control.cpp.o[0m
+[4.771s] [ 75%] [1m[32mLinking CXX shared library libwebots_ros2_control_system.so[0m
+[4.907s] [ 75%] Built target webots_ros2_control_system
+[5.934s] [100%] [1m[32mLinking CXX shared library libwebots_ros2_control.so[0m
+[6.108s] [100%] Built target webots_ros2_control
+[6.115s] Invoked command in '/home/onur/autonomous_robot/build/webots_ros2_control' returned '0': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/opt/ros/lyrical/opt/sdformat_vendor:/opt/ros/lyrical/opt/gz_tools_vendor:/opt/ros/lyrical/opt/gz_math_vendor:/opt/ros/lyrical/opt/gz_utils_vendor:/opt/ros/lyrical/opt/gz_cmake_vendor:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/onur/autonomous_robot/build/webots_ros2_control -- -j16 -l16
+[6.117s] Invoking command in '/home/onur/autonomous_robot/build/webots_ros2_control': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/opt/ros/lyrical/opt/sdformat_vendor:/opt/ros/lyrical/opt/gz_tools_vendor:/opt/ros/lyrical/opt/gz_math_vendor:/opt/ros/lyrical/opt/gz_utils_vendor:/opt/ros/lyrical/opt/gz_cmake_vendor:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/onur/autonomous_robot/build/webots_ros2_control
+[6.125s] -- Install configuration: ""
+[6.125s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/webots_ros2_control.xml
+[6.126s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/webots_ros2_control_system.xml
+[6.126s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/lib/libwebots_ros2_control.so
+[6.128s] -- Set non-toolchain portion of runtime path of "/home/onur/autonomous_robot/install/webots_ros2_control/lib/libwebots_ros2_control.so" to ""
+[6.128s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/lib/libwebots_ros2_control_system.so
+[6.128s] -- Set non-toolchain portion of runtime path of "/home/onur/autonomous_robot/install/webots_ros2_control/lib/libwebots_ros2_control_system.so" to ""
+[6.129s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/include
+[6.129s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/include/webots_ros2_control
+[6.129s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/include/webots_ros2_control/Ros2ControlSystemInterface.hpp
+[6.129s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/include/webots_ros2_control/Ros2Control.hpp
+[6.129s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/include/webots_ros2_control/Ros2ControlSystem.hpp
+[6.129s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/environment/library_path.sh
+[6.130s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/environment/library_path.dsv
+[6.130s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/ament_index/resource_index/package_run_dependencies/webots_ros2_control
+[6.130s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/ament_index/resource_index/parent_prefix_path/webots_ros2_control
+[6.130s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/environment/ament_prefix_path.sh
+[6.130s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/environment/ament_prefix_path.dsv
+[6.130s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/environment/path.sh
+[6.131s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/environment/path.dsv
+[6.131s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/local_setup.bash
+[6.131s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/local_setup.fish
+[6.131s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/local_setup.sh
+[6.131s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/local_setup.zsh
+[6.131s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/local_setup.dsv
+[6.131s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/package.dsv
+[6.132s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/ament_index/resource_index/packages/webots_ros2_control
+[6.132s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/ament_index/resource_index/webots_ros2_driver__pluginlib__plugin/webots_ros2_control
+[6.132s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/ament_index/resource_index/webots_ros2_control__pluginlib__plugin/webots_ros2_control
+[6.132s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.132s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.132s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/cmake/ament_cmake_export_libraries-extras.cmake
+[6.132s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/cmake/webots_ros2_controlConfig.cmake
+[6.132s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/cmake/webots_ros2_controlConfig-version.cmake
+[6.132s] -- Installing: /home/onur/autonomous_robot/install/webots_ros2_control/share/webots_ros2_control/package.xml
+[6.133s] Invoked command in '/home/onur/autonomous_robot/build/webots_ros2_control' returned '0': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/opt/ros/lyrical/opt/sdformat_vendor:/opt/ros/lyrical/opt/gz_tools_vendor:/opt/ros/lyrical/opt/gz_math_vendor:/opt/ros/lyrical/opt/gz_utils_vendor:/opt/ros/lyrical/opt/gz_cmake_vendor:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/onur/autonomous_robot/build/webots_ros2_control

@@ -1,0 +1,54 @@
+[0.548s] Invoking command in '/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_tests': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_universal_robot:/home/onur/autonomous_robot/install/webots_ros2_turtlebot:/home/onur/autonomous_robot/install/webots_ros2_tiago:/home/onur/autonomous_robot/install/webots_ros2_husarion:/home/onur/autonomous_robot/install/webots_ros2_epuck:/home/onur/autonomous_robot/install/webots_ros2_tesla:/home/onur/autonomous_robot/install/webots_ros2_mavic:/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_control/lib:/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/build/webots_ros2_tests/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/onur/autonomous_robot/install/webots_ros2_tests/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_universal_robot/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_turtlebot/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_tiago/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_husarion/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_epuck/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_tesla/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_mavic/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/webots_ros2_tests build --build-base /home/onur/autonomous_robot/build/webots_ros2_tests/build install --record /home/onur/autonomous_robot/build/webots_ros2_tests/install.log --install-scripts $base/lib/webots_ros2_tests --single-version-externally-managed install_data
+[0.663s] /usr/lib/python3/dist-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[0.663s]   warnings.warn(msg)
+[0.686s] /usr/lib/python3/dist-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[0.686s] !!
+[0.686s] 
+[0.686s]         ********************************************************************************
+[0.686s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[0.686s] 
+[0.686s]         License :: OSI Approved :: Apache Software License
+[0.686s] 
+[0.686s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[0.686s]         ********************************************************************************
+[0.686s] 
+[0.686s] !!
+[0.686s]   self._finalize_license_expression()
+[0.733s] running egg_info
+[0.745s] creating ../../../build/webots_ros2_tests/webots_ros2_tests.egg-info
+[0.745s] writing ../../../build/webots_ros2_tests/webots_ros2_tests.egg-info/PKG-INFO
+[0.745s] writing dependency_links to ../../../build/webots_ros2_tests/webots_ros2_tests.egg-info/dependency_links.txt
+[0.745s] writing requirements to ../../../build/webots_ros2_tests/webots_ros2_tests.egg-info/requires.txt
+[0.745s] writing top-level names to ../../../build/webots_ros2_tests/webots_ros2_tests.egg-info/top_level.txt
+[0.745s] writing manifest file '../../../build/webots_ros2_tests/webots_ros2_tests.egg-info/SOURCES.txt'
+[0.771s] reading manifest file '../../../build/webots_ros2_tests/webots_ros2_tests.egg-info/SOURCES.txt'
+[0.771s] writing manifest file '../../../build/webots_ros2_tests/webots_ros2_tests.egg-info/SOURCES.txt'
+[0.771s] running build
+[0.771s] running build_py
+[0.771s] creating /home/onur/autonomous_robot/build/webots_ros2_tests/build/lib/webots_ros2_tests
+[0.771s] copying webots_ros2_tests/utils.py -> /home/onur/autonomous_robot/build/webots_ros2_tests/build/lib/webots_ros2_tests
+[0.771s] copying webots_ros2_tests/plugin_test.py -> /home/onur/autonomous_robot/build/webots_ros2_tests/build/lib/webots_ros2_tests
+[0.771s] copying webots_ros2_tests/__init__.py -> /home/onur/autonomous_robot/build/webots_ros2_tests/build/lib/webots_ros2_tests
+[0.771s] running install
+[0.775s] running install_lib
+[0.786s] creating /home/onur/autonomous_robot/install/webots_ros2_tests/lib/python3.14/site-packages/webots_ros2_tests
+[0.787s] copying /home/onur/autonomous_robot/build/webots_ros2_tests/build/lib/webots_ros2_tests/utils.py -> /home/onur/autonomous_robot/install/webots_ros2_tests/lib/python3.14/site-packages/webots_ros2_tests
+[0.787s] copying /home/onur/autonomous_robot/build/webots_ros2_tests/build/lib/webots_ros2_tests/plugin_test.py -> /home/onur/autonomous_robot/install/webots_ros2_tests/lib/python3.14/site-packages/webots_ros2_tests
+[0.787s] copying /home/onur/autonomous_robot/build/webots_ros2_tests/build/lib/webots_ros2_tests/__init__.py -> /home/onur/autonomous_robot/install/webots_ros2_tests/lib/python3.14/site-packages/webots_ros2_tests
+[0.787s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_tests/lib/python3.14/site-packages/webots_ros2_tests/utils.py to utils.cpython-314.pyc
+[0.787s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_tests/lib/python3.14/site-packages/webots_ros2_tests/plugin_test.py to plugin_test.cpython-314.pyc
+[0.788s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_tests/lib/python3.14/site-packages/webots_ros2_tests/__init__.py to __init__.cpython-314.pyc
+[0.788s] running install_data
+[0.788s] creating /home/onur/autonomous_robot/install/webots_ros2_tests/share/ament_index/resource_index/packages
+[0.788s] copying resource/webots_ros2_tests -> /home/onur/autonomous_robot/install/webots_ros2_tests/share/ament_index/resource_index/packages
+[0.788s] copying package.xml -> /home/onur/autonomous_robot/install/webots_ros2_tests/share/webots_ros2_tests
+[0.788s] creating /home/onur/autonomous_robot/install/webots_ros2_tests/share/webots_ros2_tests/worlds
+[0.788s] copying worlds/driver_test.wbt -> /home/onur/autonomous_robot/install/webots_ros2_tests/share/webots_ros2_tests/worlds
+[0.788s] copying worlds/.driver_test.wbproj -> /home/onur/autonomous_robot/install/webots_ros2_tests/share/webots_ros2_tests/worlds
+[0.788s] creating /home/onur/autonomous_robot/install/webots_ros2_tests/share/webots_ros2_tests/resource
+[0.788s] copying resource/driver_test.urdf -> /home/onur/autonomous_robot/install/webots_ros2_tests/share/webots_ros2_tests/resource
+[0.788s] running install_egg_info
+[0.801s] Copying ../../../build/webots_ros2_tests/webots_ros2_tests.egg-info to /home/onur/autonomous_robot/install/webots_ros2_tests/lib/python3.14/site-packages/webots_ros2_tests-2025.0.1-py3.14.egg-info
+[0.801s] running install_scripts
+[0.863s] writing list of installed files to '/home/onur/autonomous_robot/build/webots_ros2_tests/install.log'
+[0.884s] Invoked command in '/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_tests' returned '0': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_universal_robot:/home/onur/autonomous_robot/install/webots_ros2_turtlebot:/home/onur/autonomous_robot/install/webots_ros2_tiago:/home/onur/autonomous_robot/install/webots_ros2_husarion:/home/onur/autonomous_robot/install/webots_ros2_epuck:/home/onur/autonomous_robot/install/webots_ros2_tesla:/home/onur/autonomous_robot/install/webots_ros2_mavic:/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_control/lib:/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/build/webots_ros2_tests/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/onur/autonomous_robot/install/webots_ros2_tests/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_universal_robot/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_turtlebot/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_tiago/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_husarion/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_epuck/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_tesla/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_mavic/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/webots_ros2_tests build --build-base /home/onur/autonomous_robot/build/webots_ros2_tests/build install --record /home/onur/autonomous_robot/build/webots_ros2_tests/install.log --install-scripts $base/lib/webots_ros2_tests --single-version-externally-managed install_data

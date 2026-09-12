@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/onur/autonomous_robot/build/webots_ros2_driver/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

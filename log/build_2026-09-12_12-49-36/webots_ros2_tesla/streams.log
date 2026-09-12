@@ -1,0 +1,58 @@
+[0.973s] Invoking command in '/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_tesla': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/build/webots_ros2_tesla/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/onur/autonomous_robot/install/webots_ros2_tesla/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/webots_ros2_tesla build --build-base /home/onur/autonomous_robot/build/webots_ros2_tesla/build install --record /home/onur/autonomous_robot/build/webots_ros2_tesla/install.log --install-scripts $base/lib/webots_ros2_tesla --single-version-externally-managed install_data
+[1.093s] /usr/lib/python3/dist-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[1.093s]   warnings.warn(msg)
+[1.116s] /usr/lib/python3/dist-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[1.116s] !!
+[1.116s] 
+[1.116s]         ********************************************************************************
+[1.116s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[1.116s] 
+[1.116s]         License :: OSI Approved :: Apache Software License
+[1.116s] 
+[1.116s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[1.116s]         ********************************************************************************
+[1.116s] 
+[1.116s] !!
+[1.116s]   self._finalize_license_expression()
+[1.163s] running egg_info
+[1.174s] creating ../../../build/webots_ros2_tesla/webots_ros2_tesla.egg-info
+[1.174s] writing ../../../build/webots_ros2_tesla/webots_ros2_tesla.egg-info/PKG-INFO
+[1.174s] writing dependency_links to ../../../build/webots_ros2_tesla/webots_ros2_tesla.egg-info/dependency_links.txt
+[1.174s] writing entry points to ../../../build/webots_ros2_tesla/webots_ros2_tesla.egg-info/entry_points.txt
+[1.174s] writing requirements to ../../../build/webots_ros2_tesla/webots_ros2_tesla.egg-info/requires.txt
+[1.174s] writing top-level names to ../../../build/webots_ros2_tesla/webots_ros2_tesla.egg-info/top_level.txt
+[1.174s] writing manifest file '../../../build/webots_ros2_tesla/webots_ros2_tesla.egg-info/SOURCES.txt'
+[1.199s] reading manifest file '../../../build/webots_ros2_tesla/webots_ros2_tesla.egg-info/SOURCES.txt'
+[1.199s] writing manifest file '../../../build/webots_ros2_tesla/webots_ros2_tesla.egg-info/SOURCES.txt'
+[1.199s] running build
+[1.199s] running build_py
+[1.199s] creating /home/onur/autonomous_robot/build/webots_ros2_tesla/build/lib/webots_ros2_tesla
+[1.200s] copying webots_ros2_tesla/lane_follower.py -> /home/onur/autonomous_robot/build/webots_ros2_tesla/build/lib/webots_ros2_tesla
+[1.200s] copying webots_ros2_tesla/__init__.py -> /home/onur/autonomous_robot/build/webots_ros2_tesla/build/lib/webots_ros2_tesla
+[1.200s] copying webots_ros2_tesla/tesla_driver.py -> /home/onur/autonomous_robot/build/webots_ros2_tesla/build/lib/webots_ros2_tesla
+[1.200s] running install
+[1.203s] running install_lib
+[1.215s] creating /home/onur/autonomous_robot/install/webots_ros2_tesla/lib/python3.14/site-packages/webots_ros2_tesla
+[1.215s] copying /home/onur/autonomous_robot/build/webots_ros2_tesla/build/lib/webots_ros2_tesla/lane_follower.py -> /home/onur/autonomous_robot/install/webots_ros2_tesla/lib/python3.14/site-packages/webots_ros2_tesla
+[1.215s] copying /home/onur/autonomous_robot/build/webots_ros2_tesla/build/lib/webots_ros2_tesla/__init__.py -> /home/onur/autonomous_robot/install/webots_ros2_tesla/lib/python3.14/site-packages/webots_ros2_tesla
+[1.215s] copying /home/onur/autonomous_robot/build/webots_ros2_tesla/build/lib/webots_ros2_tesla/tesla_driver.py -> /home/onur/autonomous_robot/install/webots_ros2_tesla/lib/python3.14/site-packages/webots_ros2_tesla
+[1.215s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_tesla/lib/python3.14/site-packages/webots_ros2_tesla/lane_follower.py to lane_follower.cpython-314.pyc
+[1.216s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_tesla/lib/python3.14/site-packages/webots_ros2_tesla/__init__.py to __init__.cpython-314.pyc
+[1.216s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_tesla/lib/python3.14/site-packages/webots_ros2_tesla/tesla_driver.py to tesla_driver.cpython-314.pyc
+[1.216s] running install_data
+[1.216s] creating /home/onur/autonomous_robot/install/webots_ros2_tesla/share/ament_index/resource_index/packages
+[1.216s] copying resource/webots_ros2_tesla -> /home/onur/autonomous_robot/install/webots_ros2_tesla/share/ament_index/resource_index/packages
+[1.217s] creating /home/onur/autonomous_robot/install/webots_ros2_tesla/share/webots_ros2_tesla/launch
+[1.217s] copying launch/robot_launch.py -> /home/onur/autonomous_robot/install/webots_ros2_tesla/share/webots_ros2_tesla/launch
+[1.217s] creating /home/onur/autonomous_robot/install/webots_ros2_tesla/share/webots_ros2_tesla/worlds
+[1.217s] copying worlds/tesla_world.wbt -> /home/onur/autonomous_robot/install/webots_ros2_tesla/share/webots_ros2_tesla/worlds
+[1.217s] copying worlds/.tesla_world.wbproj -> /home/onur/autonomous_robot/install/webots_ros2_tesla/share/webots_ros2_tesla/worlds
+[1.217s] creating /home/onur/autonomous_robot/install/webots_ros2_tesla/share/webots_ros2_tesla/resource
+[1.217s] copying resource/tesla_webots.urdf -> /home/onur/autonomous_robot/install/webots_ros2_tesla/share/webots_ros2_tesla/resource
+[1.217s] copying package.xml -> /home/onur/autonomous_robot/install/webots_ros2_tesla/share/webots_ros2_tesla
+[1.217s] running install_egg_info
+[1.229s] Copying ../../../build/webots_ros2_tesla/webots_ros2_tesla.egg-info to /home/onur/autonomous_robot/install/webots_ros2_tesla/lib/python3.14/site-packages/webots_ros2_tesla-2025.0.1-py3.14.egg-info
+[1.229s] running install_scripts
+[1.289s] Installing lane_follower script to /home/onur/autonomous_robot/install/webots_ros2_tesla/lib/webots_ros2_tesla
+[1.289s] writing list of installed files to '/home/onur/autonomous_robot/build/webots_ros2_tesla/install.log'
+[1.325s] Invoked command in '/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_tesla' returned '0': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/build/webots_ros2_tesla/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/onur/autonomous_robot/install/webots_ros2_tesla/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/webots_ros2_tesla build --build-base /home/onur/autonomous_robot/build/webots_ros2_tesla/build install --record /home/onur/autonomous_robot/build/webots_ros2_tesla/install.log --install-scripts $base/lib/webots_ros2_tesla --single-version-externally-managed install_data

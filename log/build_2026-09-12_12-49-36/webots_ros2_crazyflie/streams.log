@@ -1,0 +1,42 @@
+[0.971s] Invoking command in '/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_crazyflie': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/build/webots_ros2_crazyflie/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/onur/autonomous_robot/install/webots_ros2_crazyflie/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/webots_ros2_crazyflie build --build-base /home/onur/autonomous_robot/build/webots_ros2_crazyflie/build install --record /home/onur/autonomous_robot/build/webots_ros2_crazyflie/install.log --install-scripts $base/lib/webots_ros2_crazyflie --single-version-externally-managed install_data
+[1.083s] /usr/lib/python3/dist-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[1.083s]   warnings.warn(msg)
+[1.154s] running egg_info
+[1.165s] creating ../../../build/webots_ros2_crazyflie/webots_ros2_crazyflie.egg-info
+[1.165s] writing ../../../build/webots_ros2_crazyflie/webots_ros2_crazyflie.egg-info/PKG-INFO
+[1.165s] writing dependency_links to ../../../build/webots_ros2_crazyflie/webots_ros2_crazyflie.egg-info/dependency_links.txt
+[1.165s] writing entry points to ../../../build/webots_ros2_crazyflie/webots_ros2_crazyflie.egg-info/entry_points.txt
+[1.165s] writing requirements to ../../../build/webots_ros2_crazyflie/webots_ros2_crazyflie.egg-info/requires.txt
+[1.165s] writing top-level names to ../../../build/webots_ros2_crazyflie/webots_ros2_crazyflie.egg-info/top_level.txt
+[1.165s] writing manifest file '../../../build/webots_ros2_crazyflie/webots_ros2_crazyflie.egg-info/SOURCES.txt'
+[1.190s] reading manifest file '../../../build/webots_ros2_crazyflie/webots_ros2_crazyflie.egg-info/SOURCES.txt'
+[1.191s] writing manifest file '../../../build/webots_ros2_crazyflie/webots_ros2_crazyflie.egg-info/SOURCES.txt'
+[1.191s] running build
+[1.191s] running build_py
+[1.191s] creating /home/onur/autonomous_robot/build/webots_ros2_crazyflie/build/lib/webots_ros2_crazyflie
+[1.191s] copying webots_ros2_crazyflie/crazyflie_driver.py -> /home/onur/autonomous_robot/build/webots_ros2_crazyflie/build/lib/webots_ros2_crazyflie
+[1.191s] copying webots_ros2_crazyflie/__init__.py -> /home/onur/autonomous_robot/build/webots_ros2_crazyflie/build/lib/webots_ros2_crazyflie
+[1.191s] running install
+[1.194s] running install_lib
+[1.206s] creating /home/onur/autonomous_robot/install/webots_ros2_crazyflie/lib/python3.14/site-packages/webots_ros2_crazyflie
+[1.206s] copying /home/onur/autonomous_robot/build/webots_ros2_crazyflie/build/lib/webots_ros2_crazyflie/crazyflie_driver.py -> /home/onur/autonomous_robot/install/webots_ros2_crazyflie/lib/python3.14/site-packages/webots_ros2_crazyflie
+[1.206s] copying /home/onur/autonomous_robot/build/webots_ros2_crazyflie/build/lib/webots_ros2_crazyflie/__init__.py -> /home/onur/autonomous_robot/install/webots_ros2_crazyflie/lib/python3.14/site-packages/webots_ros2_crazyflie
+[1.206s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_crazyflie/lib/python3.14/site-packages/webots_ros2_crazyflie/crazyflie_driver.py to crazyflie_driver.cpython-314.pyc
+[1.208s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_crazyflie/lib/python3.14/site-packages/webots_ros2_crazyflie/__init__.py to __init__.cpython-314.pyc
+[1.208s] running install_data
+[1.208s] creating /home/onur/autonomous_robot/install/webots_ros2_crazyflie/share/ament_index/resource_index/packages
+[1.208s] copying resource/webots_ros2_crazyflie -> /home/onur/autonomous_robot/install/webots_ros2_crazyflie/share/ament_index/resource_index/packages
+[1.208s] creating /home/onur/autonomous_robot/install/webots_ros2_crazyflie/share/webots_ros2_crazyflie/launch
+[1.209s] copying launch/robot_launch.py -> /home/onur/autonomous_robot/install/webots_ros2_crazyflie/share/webots_ros2_crazyflie/launch
+[1.209s] creating /home/onur/autonomous_robot/install/webots_ros2_crazyflie/share/webots_ros2_crazyflie/worlds
+[1.209s] copying worlds/crazyflie_apartment.wbt -> /home/onur/autonomous_robot/install/webots_ros2_crazyflie/share/webots_ros2_crazyflie/worlds
+[1.209s] copying worlds/.crazyflie_apartment.wbproj -> /home/onur/autonomous_robot/install/webots_ros2_crazyflie/share/webots_ros2_crazyflie/worlds
+[1.209s] creating /home/onur/autonomous_robot/install/webots_ros2_crazyflie/share/webots_ros2_crazyflie/resource
+[1.209s] copying resource/crazyflie_webots.urdf -> /home/onur/autonomous_robot/install/webots_ros2_crazyflie/share/webots_ros2_crazyflie/resource
+[1.209s] copying package.xml -> /home/onur/autonomous_robot/install/webots_ros2_crazyflie/share/webots_ros2_crazyflie
+[1.209s] running install_egg_info
+[1.221s] Copying ../../../build/webots_ros2_crazyflie/webots_ros2_crazyflie.egg-info to /home/onur/autonomous_robot/install/webots_ros2_crazyflie/lib/python3.14/site-packages/webots_ros2_crazyflie-2025.0.1-py3.14.egg-info
+[1.221s] running install_scripts
+[1.281s] Installing crazyflie_driver script to /home/onur/autonomous_robot/install/webots_ros2_crazyflie/lib/webots_ros2_crazyflie
+[1.281s] writing list of installed files to '/home/onur/autonomous_robot/build/webots_ros2_crazyflie/install.log'
+[1.313s] Invoked command in '/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_crazyflie' returned '0': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/build/webots_ros2_crazyflie/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/onur/autonomous_robot/install/webots_ros2_crazyflie/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/webots_ros2_crazyflie build --build-base /home/onur/autonomous_robot/build/webots_ros2_crazyflie/build install --record /home/onur/autonomous_robot/build/webots_ros2_crazyflie/install.log --install-scripts $base/lib/webots_ros2_crazyflie --single-version-externally-managed install_data

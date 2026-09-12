@@ -1,0 +1,54 @@
+[0.989s] Invoking command in '/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_mavic': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/build/webots_ros2_mavic/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/onur/autonomous_robot/install/webots_ros2_mavic/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/webots_ros2_mavic build --build-base /home/onur/autonomous_robot/build/webots_ros2_mavic/build install --record /home/onur/autonomous_robot/build/webots_ros2_mavic/install.log --install-scripts $base/lib/webots_ros2_mavic --single-version-externally-managed install_data
+[1.100s] /usr/lib/python3/dist-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[1.100s]   warnings.warn(msg)
+[1.123s] /usr/lib/python3/dist-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[1.123s] !!
+[1.123s] 
+[1.123s]         ********************************************************************************
+[1.123s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[1.123s] 
+[1.123s]         License :: OSI Approved :: Apache Software License
+[1.123s] 
+[1.123s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[1.123s]         ********************************************************************************
+[1.123s] 
+[1.123s] !!
+[1.123s]   self._finalize_license_expression()
+[1.171s] running egg_info
+[1.183s] creating ../../../build/webots_ros2_mavic/webots_ros2_mavic.egg-info
+[1.183s] writing ../../../build/webots_ros2_mavic/webots_ros2_mavic.egg-info/PKG-INFO
+[1.183s] writing dependency_links to ../../../build/webots_ros2_mavic/webots_ros2_mavic.egg-info/dependency_links.txt
+[1.183s] writing entry points to ../../../build/webots_ros2_mavic/webots_ros2_mavic.egg-info/entry_points.txt
+[1.183s] writing requirements to ../../../build/webots_ros2_mavic/webots_ros2_mavic.egg-info/requires.txt
+[1.183s] writing top-level names to ../../../build/webots_ros2_mavic/webots_ros2_mavic.egg-info/top_level.txt
+[1.183s] writing manifest file '../../../build/webots_ros2_mavic/webots_ros2_mavic.egg-info/SOURCES.txt'
+[1.208s] reading manifest file '../../../build/webots_ros2_mavic/webots_ros2_mavic.egg-info/SOURCES.txt'
+[1.209s] writing manifest file '../../../build/webots_ros2_mavic/webots_ros2_mavic.egg-info/SOURCES.txt'
+[1.209s] running build
+[1.209s] running build_py
+[1.209s] creating /home/onur/autonomous_robot/build/webots_ros2_mavic/build/lib/webots_ros2_mavic
+[1.209s] copying webots_ros2_mavic/mavic_driver.py -> /home/onur/autonomous_robot/build/webots_ros2_mavic/build/lib/webots_ros2_mavic
+[1.209s] copying webots_ros2_mavic/__init__.py -> /home/onur/autonomous_robot/build/webots_ros2_mavic/build/lib/webots_ros2_mavic
+[1.209s] running install
+[1.212s] running install_lib
+[1.224s] creating /home/onur/autonomous_robot/install/webots_ros2_mavic/lib/python3.14/site-packages/webots_ros2_mavic
+[1.224s] copying /home/onur/autonomous_robot/build/webots_ros2_mavic/build/lib/webots_ros2_mavic/mavic_driver.py -> /home/onur/autonomous_robot/install/webots_ros2_mavic/lib/python3.14/site-packages/webots_ros2_mavic
+[1.224s] copying /home/onur/autonomous_robot/build/webots_ros2_mavic/build/lib/webots_ros2_mavic/__init__.py -> /home/onur/autonomous_robot/install/webots_ros2_mavic/lib/python3.14/site-packages/webots_ros2_mavic
+[1.225s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_mavic/lib/python3.14/site-packages/webots_ros2_mavic/mavic_driver.py to mavic_driver.cpython-314.pyc
+[1.226s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_mavic/lib/python3.14/site-packages/webots_ros2_mavic/__init__.py to __init__.cpython-314.pyc
+[1.226s] running install_data
+[1.226s] creating /home/onur/autonomous_robot/install/webots_ros2_mavic/share/ament_index/resource_index/packages
+[1.226s] copying resource/webots_ros2_mavic -> /home/onur/autonomous_robot/install/webots_ros2_mavic/share/ament_index/resource_index/packages
+[1.226s] creating /home/onur/autonomous_robot/install/webots_ros2_mavic/share/webots_ros2_mavic/launch
+[1.226s] copying launch/robot_launch.py -> /home/onur/autonomous_robot/install/webots_ros2_mavic/share/webots_ros2_mavic/launch
+[1.226s] creating /home/onur/autonomous_robot/install/webots_ros2_mavic/share/webots_ros2_mavic/worlds
+[1.226s] copying worlds/mavic_world.wbt -> /home/onur/autonomous_robot/install/webots_ros2_mavic/share/webots_ros2_mavic/worlds
+[1.226s] copying worlds/.mavic_world.wbproj -> /home/onur/autonomous_robot/install/webots_ros2_mavic/share/webots_ros2_mavic/worlds
+[1.226s] creating /home/onur/autonomous_robot/install/webots_ros2_mavic/share/webots_ros2_mavic/resource
+[1.227s] copying resource/mavic_webots.urdf -> /home/onur/autonomous_robot/install/webots_ros2_mavic/share/webots_ros2_mavic/resource
+[1.227s] copying package.xml -> /home/onur/autonomous_robot/install/webots_ros2_mavic/share/webots_ros2_mavic
+[1.227s] running install_egg_info
+[1.238s] Copying ../../../build/webots_ros2_mavic/webots_ros2_mavic.egg-info to /home/onur/autonomous_robot/install/webots_ros2_mavic/lib/python3.14/site-packages/webots_ros2_mavic-2025.0.1-py3.14.egg-info
+[1.239s] running install_scripts
+[1.299s] writing list of installed files to '/home/onur/autonomous_robot/build/webots_ros2_mavic/install.log'
+[1.339s] Invoked command in '/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_mavic' returned '0': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/build/webots_ros2_mavic/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/onur/autonomous_robot/install/webots_ros2_mavic/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/webots_ros2_mavic build --build-base /home/onur/autonomous_robot/build/webots_ros2_mavic/build install --record /home/onur/autonomous_robot/build/webots_ros2_mavic/install.log --install-scripts $base/lib/webots_ros2_mavic --single-version-externally-managed install_data

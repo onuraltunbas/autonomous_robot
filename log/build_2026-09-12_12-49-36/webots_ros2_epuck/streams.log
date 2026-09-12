@@ -1,0 +1,80 @@
+[1.136s] Invoking command in '/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_epuck': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_control/lib:/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/build/webots_ros2_epuck/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/onur/autonomous_robot/install/webots_ros2_epuck/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/webots_ros2_epuck build --build-base /home/onur/autonomous_robot/build/webots_ros2_epuck/build install --record /home/onur/autonomous_robot/build/webots_ros2_epuck/install.log --install-scripts $base/lib/webots_ros2_epuck --single-version-externally-managed install_data
+[1.250s] /usr/lib/python3/dist-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[1.250s]   warnings.warn(msg)
+[1.274s] /usr/lib/python3/dist-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[1.274s] !!
+[1.274s] 
+[1.274s]         ********************************************************************************
+[1.274s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[1.274s] 
+[1.274s]         License :: OSI Approved :: Apache Software License
+[1.274s] 
+[1.274s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[1.274s]         ********************************************************************************
+[1.274s] 
+[1.274s] !!
+[1.275s]   self._finalize_license_expression()
+[1.320s] running egg_info
+[1.331s] creating ../../../build/webots_ros2_epuck/webots_ros2_epuck.egg-info
+[1.332s] writing ../../../build/webots_ros2_epuck/webots_ros2_epuck.egg-info/PKG-INFO
+[1.332s] writing dependency_links to ../../../build/webots_ros2_epuck/webots_ros2_epuck.egg-info/dependency_links.txt
+[1.332s] writing entry points to ../../../build/webots_ros2_epuck/webots_ros2_epuck.egg-info/entry_points.txt
+[1.332s] writing requirements to ../../../build/webots_ros2_epuck/webots_ros2_epuck.egg-info/requires.txt
+[1.332s] writing top-level names to ../../../build/webots_ros2_epuck/webots_ros2_epuck.egg-info/top_level.txt
+[1.332s] writing manifest file '../../../build/webots_ros2_epuck/webots_ros2_epuck.egg-info/SOURCES.txt'
+[1.358s] reading manifest file '../../../build/webots_ros2_epuck/webots_ros2_epuck.egg-info/SOURCES.txt'
+[1.358s] writing manifest file '../../../build/webots_ros2_epuck/webots_ros2_epuck.egg-info/SOURCES.txt'
+[1.358s] running build
+[1.358s] running build_py
+[1.358s] creating /home/onur/autonomous_robot/build/webots_ros2_epuck/build/lib/webots_ros2_epuck
+[1.358s] copying webots_ros2_epuck/drive_calibrator.py -> /home/onur/autonomous_robot/build/webots_ros2_epuck/build/lib/webots_ros2_epuck
+[1.358s] copying webots_ros2_epuck/simple_mapper.py -> /home/onur/autonomous_robot/build/webots_ros2_epuck/build/lib/webots_ros2_epuck
+[1.358s] copying webots_ros2_epuck/epuck_node.py -> /home/onur/autonomous_robot/build/webots_ros2_epuck/build/lib/webots_ros2_epuck
+[1.358s] copying webots_ros2_epuck/__init__.py -> /home/onur/autonomous_robot/build/webots_ros2_epuck/build/lib/webots_ros2_epuck
+[1.358s] running install
+[1.361s] running install_lib
+[1.372s] creating /home/onur/autonomous_robot/install/webots_ros2_epuck/lib/python3.14/site-packages/webots_ros2_epuck
+[1.373s] copying /home/onur/autonomous_robot/build/webots_ros2_epuck/build/lib/webots_ros2_epuck/drive_calibrator.py -> /home/onur/autonomous_robot/install/webots_ros2_epuck/lib/python3.14/site-packages/webots_ros2_epuck
+[1.373s] copying /home/onur/autonomous_robot/build/webots_ros2_epuck/build/lib/webots_ros2_epuck/simple_mapper.py -> /home/onur/autonomous_robot/install/webots_ros2_epuck/lib/python3.14/site-packages/webots_ros2_epuck
+[1.373s] copying /home/onur/autonomous_robot/build/webots_ros2_epuck/build/lib/webots_ros2_epuck/epuck_node.py -> /home/onur/autonomous_robot/install/webots_ros2_epuck/lib/python3.14/site-packages/webots_ros2_epuck
+[1.373s] copying /home/onur/autonomous_robot/build/webots_ros2_epuck/build/lib/webots_ros2_epuck/__init__.py -> /home/onur/autonomous_robot/install/webots_ros2_epuck/lib/python3.14/site-packages/webots_ros2_epuck
+[1.373s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_epuck/lib/python3.14/site-packages/webots_ros2_epuck/drive_calibrator.py to drive_calibrator.cpython-314.pyc
+[1.374s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_epuck/lib/python3.14/site-packages/webots_ros2_epuck/simple_mapper.py to simple_mapper.cpython-314.pyc
+[1.375s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_epuck/lib/python3.14/site-packages/webots_ros2_epuck/epuck_node.py to epuck_node.cpython-314.pyc
+[1.375s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_epuck/lib/python3.14/site-packages/webots_ros2_epuck/__init__.py to __init__.cpython-314.pyc
+[1.375s] running install_data
+[1.376s] creating /home/onur/autonomous_robot/install/webots_ros2_epuck/share/ament_index/resource_index/packages
+[1.376s] copying resource/webots_ros2_epuck -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/ament_index/resource_index/packages
+[1.376s] creating /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/launch
+[1.376s] copying launch/robot_launch.py -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/launch
+[1.376s] copying launch/robot_tools_launch.py -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/launch
+[1.376s] copying launch/rats_life_launch.py -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/launch
+[1.376s] copying launch/rats_life_waypoints_launch.py -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/launch
+[1.376s] creating /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/worlds
+[1.376s] copying worlds/epuck_world.wbt -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/worlds
+[1.376s] copying worlds/.epuck_world.wbproj -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/worlds
+[1.376s] copying worlds/rats_life_benchmark.wbt -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/worlds
+[1.376s] copying worlds/.rats_life_benchmark.wbproj -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/worlds
+[1.376s] creating /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/protos
+[1.376s] copying protos/LegoTallInterval.proto -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/protos
+[1.376s] copying protos/LegoTallWall.proto -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/protos
+[1.376s] creating /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/resource
+[1.376s] copying resource/all.rviz -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/resource
+[1.377s] copying resource/nav2_params.yaml -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/resource
+[1.377s] copying resource/nav2_params_iron.yaml -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/resource
+[1.377s] copying resource/map_rats_life.pgm -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/resource
+[1.377s] copying resource/map_rats_life.yaml -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/resource
+[1.378s] copying resource/nav2_rats_life_waypoints.yaml -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/resource
+[1.378s] copying resource/epuck_world_map.pgm -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/resource
+[1.378s] copying resource/epuck_world_map.yaml -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/resource
+[1.378s] copying resource/epuck_webots.urdf -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/resource
+[1.378s] copying resource/ros2_control.yml -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck/resource
+[1.378s] copying package.xml -> /home/onur/autonomous_robot/install/webots_ros2_epuck/share/webots_ros2_epuck
+[1.378s] running install_egg_info
+[1.389s] Copying ../../../build/webots_ros2_epuck/webots_ros2_epuck.egg-info to /home/onur/autonomous_robot/install/webots_ros2_epuck/lib/python3.14/site-packages/webots_ros2_epuck-2025.0.1-py3.14.egg-info
+[1.389s] running install_scripts
+[1.449s] Installing drive_calibrator script to /home/onur/autonomous_robot/install/webots_ros2_epuck/lib/webots_ros2_epuck
+[1.450s] Installing epuck_node script to /home/onur/autonomous_robot/install/webots_ros2_epuck/lib/webots_ros2_epuck
+[1.450s] Installing simple_mapper script to /home/onur/autonomous_robot/install/webots_ros2_epuck/lib/webots_ros2_epuck
+[1.450s] writing list of installed files to '/home/onur/autonomous_robot/build/webots_ros2_epuck/install.log'
+[1.491s] Invoked command in '/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_epuck' returned '0': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_control/lib:/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/build/webots_ros2_epuck/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/onur/autonomous_robot/install/webots_ros2_epuck/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/webots_ros2_epuck build --build-base /home/onur/autonomous_robot/build/webots_ros2_epuck/build install --record /home/onur/autonomous_robot/build/webots_ros2_epuck/install.log --install-scripts $base/lib/webots_ros2_epuck --single-version-externally-managed install_data

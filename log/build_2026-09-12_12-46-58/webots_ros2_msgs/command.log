@@ -1,0 +1,1 @@
+Invoking command in '/home/onur/autonomous_robot/build/webots_ros2_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/lyrical DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs -DCMAKE_INSTALL_PREFIX=/home/onur/autonomous_robot/install/webots_ros2_msgs

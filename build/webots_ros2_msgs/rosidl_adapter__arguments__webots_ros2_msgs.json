@@ -1,0 +1,17 @@
+{
+  "package_name": "webots_ros2_msgs",
+  "non_idl_tuples": [
+    "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs:msg/BoolStamped.msg",
+    "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs:msg/FloatStamped.msg",
+    "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs:msg/StringStamped.msg",
+    "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs:msg/CameraRecognitionObject.msg",
+    "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs:msg/CameraRecognitionObjects.msg",
+    "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs:msg/UrdfRobot.msg",
+    "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs:msg/PenInkProperties.msg",
+    "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs:srv/EmitterSendString.srv",
+    "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs:srv/GetBool.srv",
+    "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs:srv/SetString.srv",
+    "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs:srv/SpawnNodeFromString.srv",
+    "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs:srv/SpawnUrdfRobot.srv"
+  ]
+}

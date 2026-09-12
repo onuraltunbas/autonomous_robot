@@ -1,0 +1,58 @@
+[1.131s] Invoking command in '/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_husarion': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_control/lib:/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/build/webots_ros2_husarion/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/onur/autonomous_robot/install/webots_ros2_husarion/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/webots_ros2_husarion build --build-base /home/onur/autonomous_robot/build/webots_ros2_husarion/build install --record /home/onur/autonomous_robot/build/webots_ros2_husarion/install.log --single-version-externally-managed install_data
+[1.246s] /usr/lib/python3/dist-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[1.246s]   warnings.warn(msg)
+[1.269s] /usr/lib/python3/dist-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+[1.269s] !!
+[1.269s] 
+[1.269s]         ********************************************************************************
+[1.269s]         Please consider removing the following classifiers in favor of a SPDX license expression:
+[1.269s] 
+[1.269s]         License :: OSI Approved :: Apache Software License
+[1.269s] 
+[1.270s]         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+[1.270s]         ********************************************************************************
+[1.270s] 
+[1.270s] !!
+[1.270s]   self._finalize_license_expression()
+[1.316s] running egg_info
+[1.327s] creating ../../../build/webots_ros2_husarion/webots_ros2_husarion.egg-info
+[1.327s] writing ../../../build/webots_ros2_husarion/webots_ros2_husarion.egg-info/PKG-INFO
+[1.327s] writing dependency_links to ../../../build/webots_ros2_husarion/webots_ros2_husarion.egg-info/dependency_links.txt
+[1.328s] writing requirements to ../../../build/webots_ros2_husarion/webots_ros2_husarion.egg-info/requires.txt
+[1.328s] writing top-level names to ../../../build/webots_ros2_husarion/webots_ros2_husarion.egg-info/top_level.txt
+[1.328s] writing manifest file '../../../build/webots_ros2_husarion/webots_ros2_husarion.egg-info/SOURCES.txt'
+[1.353s] reading manifest file '../../../build/webots_ros2_husarion/webots_ros2_husarion.egg-info/SOURCES.txt'
+[1.354s] writing manifest file '../../../build/webots_ros2_husarion/webots_ros2_husarion.egg-info/SOURCES.txt'
+[1.354s] running build
+[1.354s] running build_py
+[1.354s] creating /home/onur/autonomous_robot/build/webots_ros2_husarion/build/lib/webots_ros2_husarion
+[1.354s] copying webots_ros2_husarion/__init__.py -> /home/onur/autonomous_robot/build/webots_ros2_husarion/build/lib/webots_ros2_husarion
+[1.354s] running install
+[1.356s] running install_lib
+[1.368s] creating /home/onur/autonomous_robot/install/webots_ros2_husarion/lib/python3.14/site-packages/webots_ros2_husarion
+[1.368s] copying /home/onur/autonomous_robot/build/webots_ros2_husarion/build/lib/webots_ros2_husarion/__init__.py -> /home/onur/autonomous_robot/install/webots_ros2_husarion/lib/python3.14/site-packages/webots_ros2_husarion
+[1.368s] byte-compiling /home/onur/autonomous_robot/install/webots_ros2_husarion/lib/python3.14/site-packages/webots_ros2_husarion/__init__.py to __init__.cpython-314.pyc
+[1.368s] running install_data
+[1.368s] creating /home/onur/autonomous_robot/install/webots_ros2_husarion/share/ament_index/resource_index/packages
+[1.368s] copying resource/webots_ros2_husarion -> /home/onur/autonomous_robot/install/webots_ros2_husarion/share/ament_index/resource_index/packages
+[1.368s] creating /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/launch
+[1.368s] copying launch/rosbot_launch.py -> /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/launch
+[1.369s] copying launch/rosbot_xl_launch.py -> /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/launch
+[1.369s] creating /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/resource
+[1.369s] copying resource/rosbot_controllers.yaml -> /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/resource
+[1.369s] copying resource/rosbot_xl_controllers.yaml -> /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/resource
+[1.369s] copying resource/ekf.yaml -> /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/resource
+[1.369s] copying resource/laser_filter.yaml -> /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/resource
+[1.369s] copying resource/rosbot_webots.urdf -> /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/resource
+[1.369s] copying resource/rosbot_links_remappings.yaml -> /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/resource
+[1.369s] creating /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/worlds
+[1.369s] copying worlds/rosbot.wbt -> /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/worlds
+[1.369s] copying worlds/rosbot_xl.wbt -> /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/worlds
+[1.369s] creating /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/worlds/meshes
+[1.369s] copying worlds/meshes/husarion_world.dae -> /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion/worlds/meshes
+[1.370s] copying package.xml -> /home/onur/autonomous_robot/install/webots_ros2_husarion/share/webots_ros2_husarion
+[1.370s] running install_egg_info
+[1.381s] Copying ../../../build/webots_ros2_husarion/webots_ros2_husarion.egg-info to /home/onur/autonomous_robot/install/webots_ros2_husarion/lib/python3.14/site-packages/webots_ros2_husarion-2025.0.1-py3.14.egg-info
+[1.382s] running install_scripts
+[1.441s] writing list of installed files to '/home/onur/autonomous_robot/build/webots_ros2_husarion/install.log'
+[1.493s] Invoked command in '/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_husarion' returned '0': AMENT_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:/home/onur/autonomous_robot/install/webots_ros2_importer:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/onur/autonomous_robot/install/webots_ros2_control:/home/onur/autonomous_robot/install/webots_ros2_driver:/home/onur/autonomous_robot/install/webots_ros2_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/onur/autonomous_robot/install/webots_ros2_control/lib:/home/onur/autonomous_robot/install/webots_ros2_driver/lib:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/onur/autonomous_robot/build/webots_ros2_husarion/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/onur/autonomous_robot/install/webots_ros2_husarion/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_driver/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages:/home/onur/autonomous_robot/install/webots_ros2_importer/lib/python3.14/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/webots_ros2_husarion build --build-base /home/onur/autonomous_robot/build/webots_ros2_husarion/build install --record /home/onur/autonomous_robot/build/webots_ros2_husarion/install.log --single-version-externally-managed install_data

@@ -1,0 +1,5 @@
+source;share/webots_ros2_driver/local_setup.bash
+source;share/webots_ros2_driver/local_setup.dsv
+source;share/webots_ros2_driver/local_setup.fish
+source;share/webots_ros2_driver/local_setup.sh
+source;share/webots_ros2_driver/local_setup.zsh
