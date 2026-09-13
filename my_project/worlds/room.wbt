@@ -5,6 +5,14 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
 
 WorldInfo {
+  contactProperties [
+    ContactProperties {
+      material1 "caster"
+      coulombFriction [
+        0
+      ]
+    }
+  ]
 }
 Viewpoint {
   orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
@@ -17,8 +25,8 @@ TexturedBackgroundLight {
 RectangleArena {
 }
 Robot {
-  translation -0.11335308796052787 0.04864115243353147 0.049547222252907995
-  rotation 0.0012730504674188727 0.047589485771085425 -0.9988661673049855 0.05361128406648011
+  translation 0 0 0.05
+  rotation 0 0 1 0
   children [
     DistanceSensor {
       translation -0.1 0 0
@@ -124,6 +132,7 @@ Robot {
         }
       ]
       name "solid(2)"
+      contactMaterial "caster"
       boundingObject Sphere {
         radius 0.02
       }
@@ -132,8 +141,8 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 4.893594739200121e-08
         axis 0 1 0
+        anchor -0.05 -0.11 -0.01
       }
       device [
         RotationalMotor {
@@ -141,8 +150,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.050000000489359445 -0.10999999999999988 -0.009999997553202621
-        rotation 0.9999999999999993 2.4467883820279905e-08 -2.4467973696000632e-08 1.5707999999999998
+        translation -0.05 -0.11 -0.01
+        rotation 1 0 0 1.5708
         children [
           Shape {
             appearance PBRAppearance {
@@ -161,14 +170,12 @@ Robot {
         }
         physics Physics {
         }
-        linearVelocity 3.4557646151347374e-08 -1.3880519445959335e-08 3.794517995405825e-09
-        angularVelocity 3.0591486772471985e-07 1.0056743830470737e-06 1.454663993655787e-07
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 1.5094307050401623e-07
         axis 0 1 0
+        anchor -0.05 0.11 -0.01
       }
       device [
         RotationalMotor {
@@ -176,8 +183,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.05000000150943021 0.10999999999999996 -0.009999992452846366
-        rotation 0.9999999999999942 7.547125803008858e-08 -7.547153525200761e-08 1.5708000000000049
+        translation -0.05 0.11 -0.01
+        rotation 1 0 0 1.5708
         children [
           Shape {
             appearance PBRAppearance {
@@ -195,8 +202,6 @@ Robot {
         }
         physics Physics {
         }
-        linearVelocity -7.841135564639143e-09 -1.1576149316509976e-08 9.327849565401695e-11
-        angularVelocity 2.426277251524001e-07 -1.747527217935638e-07 1.4249478864699739e-07
       }
     }
     Shape {
@@ -209,9 +214,9 @@ Robot {
     size 0.2 0.2 0.05
   }
   physics Physics {
+    density -1
     mass 1
   }
   controller "<extern>"
-  linearVelocity 3.87050883931333e-09 -1.5949936661215353e-08 -1.9087396514269597e-08
-  angularVelocity 2.422069475548646e-07 -1.7422658849475748e-07 1.43255502028658e-07
+  supervisor TRUE
 }

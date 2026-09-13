@@ -1,3 +1,1 @@
-UrdfRobot robot
----
-bool success
+/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/srv/SpawnUrdfRobot.srv

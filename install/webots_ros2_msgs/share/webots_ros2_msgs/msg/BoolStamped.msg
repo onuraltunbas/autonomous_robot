@@ -1,2 +1,1 @@
-std_msgs/Header header
-bool data
+/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/msg/BoolStamped.msg

@@ -1,2 +1,1 @@
-std_msgs/Header header
-CameraRecognitionObject[] objects
+/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/msg/CameraRecognitionObjects.msg

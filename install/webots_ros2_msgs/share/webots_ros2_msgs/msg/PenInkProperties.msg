@@ -1,8 +1,1 @@
-# Set the ink properties of a pen device.
-# See https://www.cyberbotics.com/doc/reference/pen#wb_pen_set_ink_color for more details
-
-# Ink color in hexadecimal format
-int32 color
-
-# Ink density (similar in context to alpha of rgba)
-float32 density
+/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/msg/PenInkProperties.msg

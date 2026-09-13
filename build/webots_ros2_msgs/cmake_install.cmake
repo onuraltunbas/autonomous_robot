@@ -43,67 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/rosidl_interfaces" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/webots_ros2_msgs")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_type_description/webots_ros2_msgs/msg/BoolStamped.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_type_description/webots_ros2_msgs/msg/FloatStamped.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_type_description/webots_ros2_msgs/msg/StringStamped.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_type_description/webots_ros2_msgs/msg/CameraRecognitionObject.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_type_description/webots_ros2_msgs/msg/CameraRecognitionObjects.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_type_description/webots_ros2_msgs/msg/UrdfRobot.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_type_description/webots_ros2_msgs/msg/PenInkProperties.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_type_description/webots_ros2_msgs/srv/EmitterSendString.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_type_description/webots_ros2_msgs/srv/GetBool.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_type_description/webots_ros2_msgs/srv/SetString.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_type_description/webots_ros2_msgs/srv/SpawnNodeFromString.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_type_description/webots_ros2_msgs/srv/SpawnUrdfRobot.json")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/webots_ros2_msgs/webots_ros2_msgs" TYPE DIRECTORY FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_c/webots_ros2_msgs/" REGEX "/[^/]*\\.h$")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/environment" TYPE FILE FILES "/opt/ros/lyrical/lib/python3.14/site-packages/ament_package/template/environment_hook/library_path.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/environment" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_environment_hooks/library_path.dsv")
+  include("/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -130,10 +70,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/webots_ros2_msgs/webots_ros2_msgs" TYPE DIRECTORY FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_typesupport_fastrtps_c/webots_ros2_msgs/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libwebots_ros2_msgs__rosidl_typesupport_fastrtps_c.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libwebots_ros2_msgs__rosidl_typesupport_fastrtps_c.so")
     file(RPATH_CHECK
@@ -157,14 +93,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/webots_ros2_msgs/webots_ros2_msgs" TYPE DIRECTORY FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_cpp/webots_ros2_msgs/" REGEX "/[^/]*\\.hpp$")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/webots_ros2_msgs/webots_ros2_msgs" TYPE DIRECTORY FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_typesupport_fastrtps_cpp/webots_ros2_msgs/" REGEX "/[^/]*\\.cpp$" EXCLUDE)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libwebots_ros2_msgs__rosidl_typesupport_fastrtps_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libwebots_ros2_msgs__rosidl_typesupport_fastrtps_cpp.so")
     file(RPATH_CHECK
@@ -185,10 +113,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/webots_ros2_msgs/webots_ros2_msgs" TYPE DIRECTORY FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_typesupport_introspection_c/webots_ros2_msgs/" REGEX "/[^/]*\\.h$")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -238,10 +162,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/webots_ros2_msgs/webots_ros2_msgs" TYPE DIRECTORY FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_typesupport_introspection_cpp/webots_ros2_msgs/" REGEX "/[^/]*\\.hpp$")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libwebots_ros2_msgs__rosidl_typesupport_introspection_cpp.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libwebots_ros2_msgs__rosidl_typesupport_introspection_cpp.so")
     file(RPATH_CHECK
@@ -288,86 +208,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/environment" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_environment_hooks/pythonpath.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/environment" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_environment_hooks/pythonpath.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_fastrtps_c.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_fastrtps_c.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_fastrtps_c.so"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs" TYPE MODULE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_py/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_fastrtps_c.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_fastrtps_c.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_fastrtps_c.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_fastrtps_c.so"
-         OLD_RPATH "/home/onur/autonomous_robot/build/webots_ros2_msgs:/opt/ros/lyrical/lib:/opt/ros/lyrical/lib/x86_64-linux-gnu:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_fastrtps_c.so")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/onur/autonomous_robot/build/webots_ros2_msgs/CMakeFiles/webots_ros2_msgs_s__rosidl_typesupport_fastrtps_c.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_introspection_c.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_introspection_c.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_introspection_c.so"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs" TYPE MODULE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_py/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_introspection_c.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_introspection_c.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_introspection_c.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_introspection_c.so"
-         OLD_RPATH "/home/onur/autonomous_robot/build/webots_ros2_msgs:/opt/ros/lyrical/lib:/opt/ros/lyrical/lib/x86_64-linux-gnu:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_introspection_c.so")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/onur/autonomous_robot/build/webots_ros2_msgs/CMakeFiles/webots_ros2_msgs_s__rosidl_typesupport_introspection_c.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_c.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_c.so")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_c.so"
-         RPATH "")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs" TYPE MODULE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_py/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_c.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_c.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_c.so")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_c.so"
-         OLD_RPATH "/home/onur/autonomous_robot/build/webots_ros2_msgs:/opt/ros/lyrical/lib:/opt/ros/lyrical/lib/x86_64-linux-gnu:"
-         NEW_RPATH "")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs/webots_ros2_msgs_s__rosidl_typesupport_c.so")
-    endif()
-  endif()
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/onur/autonomous_robot/build/webots_ros2_msgs/CMakeFiles/webots_ros2_msgs_s__rosidl_typesupport_c.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libwebots_ros2_msgs__rosidl_generator_py.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libwebots_ros2_msgs__rosidl_generator_py.so")
     file(RPATH_CHECK
@@ -388,158 +228,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs" TYPE DIRECTORY FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_rs/webots_ros2_msgs/rust")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs/msg/BoolStamped.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs/msg/FloatStamped.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs/msg/StringStamped.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs/msg/CameraRecognitionObject.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs/msg/CameraRecognitionObjects.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs/msg/UrdfRobot.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs/msg/PenInkProperties.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs/srv/EmitterSendString.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs/srv/GetBool.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs/srv/SetString.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs/srv/SpawnNodeFromString.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_adapter/webots_ros2_msgs/srv/SpawnUrdfRobot.idl")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/msg/BoolStamped.msg")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/msg/FloatStamped.msg")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/msg/StringStamped.msg")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/msg/CameraRecognitionObject.msg")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/msg/CameraRecognitionObjects.msg")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/msg/UrdfRobot.msg")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/msg" TYPE FILE FILES "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/msg/PenInkProperties.msg")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/srv/EmitterSendString.srv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/srv/GetBool.srv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/srv/SetString.srv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/srv/SpawnNodeFromString.srv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/srv" TYPE FILE FILES "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/srv/SpawnUrdfRobot.srv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/webots_ros2_msgs")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/webots_ros2_msgs")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/environment" TYPE FILE FILES "/opt/ros/lyrical/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/environment" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_environment_hooks/ament_prefix_path.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/environment" TYPE FILE FILES "/opt/ros/lyrical/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/environment" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_environment_hooks/path.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_environment_hooks/local_setup.bash")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_environment_hooks/local_setup.fish")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_environment_hooks/local_setup.sh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_environment_hooks/local_setup.zsh")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_environment_hooks/local_setup.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_environment_hooks/package.dsv")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_index/share/ament_index/resource_index/packages/webots_ros2_msgs")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -747,62 +435,11 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs-2025.0.1-py3.14.egg-info" TYPE DIRECTORY FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_python/webots_ros2_msgs/webots_ros2_msgs.egg-info/")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.14/site-packages/webots_ros2_msgs" TYPE DIRECTORY FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_py/webots_ros2_msgs/" REGEX "/[^/]*\\.pyc$" EXCLUDE REGEX "/\\_\\_pycache\\_\\_$" EXCLUDE)
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
       COMMAND
       "/usr/bin/python3" "-m" "compileall"
       "/home/onur/autonomous_robot/install/webots_ros2_msgs/lib/python3.14/site-packages/webots_ros2_msgs"
     )
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/cmake" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_cmake/rosidl_cmake-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/cmake" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/cmake" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/cmake" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/cmake" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/cmake" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/cmake" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/cmake" TYPE FILE FILES "/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_cmake/rosidl_cmake_aggregate_target-extras.cmake")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs/cmake" TYPE FILE FILES
-    "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_core/webots_ros2_msgsConfig.cmake"
-    "/home/onur/autonomous_robot/build/webots_ros2_msgs/ament_cmake_core/webots_ros2_msgsConfig-version.cmake"
-    )
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/webots_ros2_msgs" TYPE FILE FILES "/home/onur/autonomous_robot/src/webots_ros2/webots_ros2_msgs/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

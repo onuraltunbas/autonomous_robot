@@ -22,7 +22,7 @@ AMENT_CMAKE_ENVIRONMENT_PARENT_PREFIX_PATH_GENERATION:BOOL=ON
 
 //Replace the CMake install command with a custom implementation
 // using symlinks instead of copying resources
-AMENT_CMAKE_SYMLINK_INSTALL:BOOL=OFF
+AMENT_CMAKE_SYMLINK_INSTALL:BOOL=1
 
 //Generate an uninstall target to revert the effects of the install
 // step
@@ -722,4 +722,8 @@ _Python3_NUMPY_SIGNATURE:INTERNAL=338bd5cf56075e8ad719def185d13b06
 _Python3_NumPy_INCLUDE_DIR:INTERNAL=/home/onur/.local/lib/python3.14/site-packages/numpy/_core/include
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
+//Index for unique symlink install files
+__AMENT_CMAKE_SYMLINK_INSTALL_FILES_INDEX:INTERNAL=64
+//Index for unique symlink install targets
+__AMENT_CMAKE_SYMLINK_INSTALL_TARGETS_INDEX:INTERNAL=3
 

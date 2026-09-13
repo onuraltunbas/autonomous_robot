@@ -2,10 +2,7 @@
 <robot name="robot">
     <webots>
         <device reference="camera" type="Camera">
-            <ros>
-                <topicName>/camera/image_raw</topicName>
-                <alwaysOn>true</alwaysOn>
-            </ros>
+            <ros><topicName>/camera/image_raw</topicName><alwaysOn>true</alwaysOn></ros>
         </device>
         <device reference="sonar_front" type="DistanceSensor">
             <ros><topicName>/sonar/front</topicName><alwaysOn>true</alwaysOn></ros>
@@ -19,5 +16,7 @@
         <device reference="sonar_back" type="DistanceSensor">
             <ros><topicName>/sonar/back</topicName><alwaysOn>true</alwaysOn></ros>
         </device>
+        <!-- Kendi yazdığımız Python motor sürücüsü -->
+        <plugin type="my_robot_pkg.my_robot_driver.MyRobotDriver" />
     </webots>
 </robot>

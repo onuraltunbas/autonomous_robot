@@ -1,12 +1,1 @@
-// generated from rosidl_generator_cpp/resource/idl.hpp.em
-// generated code does not contain a copyright notice
-
-#ifndef WEBOTS_ROS2_MSGS__MSG__CAMERA_RECOGNITION_OBJECTS_HPP_
-#define WEBOTS_ROS2_MSGS__MSG__CAMERA_RECOGNITION_OBJECTS_HPP_
-
-#include "webots_ros2_msgs/msg/detail/camera_recognition_objects__struct.hpp"  // IWYU pragma: export
-#include "webots_ros2_msgs/msg/detail/camera_recognition_objects__builder.hpp"    // IWYU pragma: export
-#include "webots_ros2_msgs/msg/detail/camera_recognition_objects__traits.hpp"    // IWYU pragma: export
-#include "webots_ros2_msgs/msg/detail/camera_recognition_objects__type_support.hpp"    // IWYU pragma: export
-
-#endif  // WEBOTS_ROS2_MSGS__MSG__CAMERA_RECOGNITION_OBJECTS_HPP_
+/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_cpp/webots_ros2_msgs/msg/camera_recognition_objects.hpp

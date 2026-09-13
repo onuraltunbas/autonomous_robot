@@ -1,12 +1,1 @@
-// generated from rosidl_generator_cpp/resource/idl.hpp.em
-// generated code does not contain a copyright notice
-
-#ifndef WEBOTS_ROS2_MSGS__MSG__STRING_STAMPED_HPP_
-#define WEBOTS_ROS2_MSGS__MSG__STRING_STAMPED_HPP_
-
-#include "webots_ros2_msgs/msg/detail/string_stamped__struct.hpp"  // IWYU pragma: export
-#include "webots_ros2_msgs/msg/detail/string_stamped__builder.hpp"    // IWYU pragma: export
-#include "webots_ros2_msgs/msg/detail/string_stamped__traits.hpp"    // IWYU pragma: export
-#include "webots_ros2_msgs/msg/detail/string_stamped__type_support.hpp"    // IWYU pragma: export
-
-#endif  // WEBOTS_ROS2_MSGS__MSG__STRING_STAMPED_HPP_
+/home/onur/autonomous_robot/build/webots_ros2_msgs/rosidl_generator_cpp/webots_ros2_msgs/msg/string_stamped.hpp
