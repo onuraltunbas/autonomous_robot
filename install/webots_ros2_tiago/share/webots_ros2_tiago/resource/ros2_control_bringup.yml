@@ -1,3 +1,1 @@
-controller_manager:
-  ros__parameters:
-    update_rate: 50
+/home/onur/autonomous_robot/build/webots_ros2_tiago/resource/ros2_control_bringup.yml

@@ -2,6 +2,7 @@ import math
 import rclpy
 from geometry_msgs.msg import Twist, TransformStamped
 from nav_msgs.msg import Odometry
+from std_msgs.msg import Empty
 import tf2_ros
 
 class MyRobotDriver:
@@ -44,6 +45,7 @@ class MyRobotDriver:
         rclpy.init(args=None)
         self.__node = rclpy.create_node('my_robot_driver')
         self.__node.create_subscription(Twist, 'cmd_vel', self.__cmd_vel_callback, 1)
+        self.__node.create_subscription(Empty, '/robot/reset', self.__reset_callback, 1)
 
         # Odometri Publisher ve TF Broadcaster
         self.__odom_pub = self.__node.create_publisher(Odometry, 'odom', 10)
@@ -52,18 +54,37 @@ class MyRobotDriver:
     def __cmd_vel_callback(self, twist):
         self.__target_twist = twist
 
+    def __reset_callback(self, msg):
+        # Robotu başlangıç / güvenli merkez noktaya ışınla
+        robot_node = self.__robot.getSelf()
+        if robot_node:
+            trans_field = robot_node.getField('translation')
+            rot_field = robot_node.getField('rotation')
+            if trans_field:
+                trans_field.setSFVec3f([0.0, 0.0, 0.05])
+            if rot_field:
+                rot_field.setSFRotation([0.0, 0.0, 1.0, 0.0])
+            robot_node.resetPhysics()
+
+        # Odometriyi sıfırla
+        self.__x = 0.0
+        self.__y = 0.0
+        self.__yaw = 0.0
+        self.__first_step = True
+        self.__left_motor.setVelocity(0.0)
+        self.__right_motor.setVelocity(0.0)
+
     def step(self):
-        # ROS 2'den gelen yön komutlarını okuyoruz
+        # ROS 2'den gelen komutları oku
         rclpy.spin_once(self.__node, timeout_sec=0)
 
         forward_speed = self.__target_twist.linear.x
         angular_speed = self.__target_twist.angular.z
 
-        # Diferansiyel Sürüş Matematiği (Tekerlek yarıçapı: 0.04m, Merkezden uzaklık: 0.11m)
+        # Diferansiyel Sürüş Matematiği
         command_motor_left = (forward_speed - angular_speed * 0.11) / self.__wheel_radius
         command_motor_right = (forward_speed + angular_speed * 0.11) / self.__wheel_radius
 
-        # Hız komutlarını Webots motorlarına gönderiyoruz
         self.__left_motor.setVelocity(command_motor_left)
         self.__right_motor.setVelocity(command_motor_right)
 
@@ -88,7 +109,7 @@ class MyRobotDriver:
 
             # Konum güncelleme
             self.__yaw += d_yaw
-            self.__yaw = math.atan2(math.sin(self.__yaw), math.cos(self.__yaw))  # [-pi, pi] normalize
+            self.__yaw = math.atan2(math.sin(self.__yaw), math.cos(self.__yaw))
             self.__x += d_center * math.cos(self.__yaw)
             self.__y += d_center * math.sin(self.__yaw)
 
@@ -98,7 +119,7 @@ class MyRobotDriver:
             qz = math.sin(self.__yaw / 2.0)
             qw = math.cos(self.__yaw / 2.0)
 
-            # 1. TF Dönüşümü Yayınlama (odom -> base_link)
+            # 1. TF Dönüşümü (odom -> base_link)
             t = TransformStamped()
             t.header.stamp = current_time
             t.header.frame_id = 'odom'
@@ -112,7 +133,7 @@ class MyRobotDriver:
             t.transform.rotation.w = qw
             self.__tf_broadcaster.sendTransform(t)
 
-            # 2. Odometri Mesajı Yayınlama (/odom)
+            # 2. Odometri Mesajı (/odom)
             odom = Odometry()
             odom.header.stamp = current_time
             odom.header.frame_id = 'odom'

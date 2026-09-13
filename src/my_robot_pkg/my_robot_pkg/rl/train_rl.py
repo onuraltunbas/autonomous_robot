@@ -54,51 +54,64 @@ def main():
     print("🔌 Webots & ROS 2 Ortamına bağlanılıyor...")
     env = RobotEnv()
 
-    # 3. PPO HİPERPARAMETRELERİ (ÖĞRENME AYARLARI)
-    # -------------------------------------------------------------
-    # learning_rate (Öğrenme Hızı - 3e-4): Ağın ağırlıklarını ne hızda güncelleyeceği.
-    #   -> Çok büyük olursa öğrendiklerini unutur, çok küçük olursa çok yavaş öğrenir.
-    #
-    # n_steps (Tecrübe Toplama Adımı - 1024): Yapay zekanın her güncelleme öncesi
-    #   çevreden topladığı adım (tecrübe) sayısı.
-    #
-    # batch_size (Mini Paket Boyutu - 64): 1024 adımlık tecrübeyi 64'lük paketler
-    #   halinde nöral ağa besleyerek öğrenmeyi optimize eder.
-    #
-    # n_epochs (Tekrar Sayısı - 10): Toplanan verinin üzerinden kaç kez geçileceği.
-    #
-    # gamma (Gelecek İskonto Oranı - 0.99): Robotun anlık ödül yerine gelecekteki
-    #   büyük hedefe ne kadar değer vereceği (1.0'a yakın = uzun vadeli planlama).
-    #
-    # gae_lambda (Avantaj Katsayısı - 0.95): Ödül tahminlerindeki varyansı düşürür.
-    #
-    # clip_range (PPO Politika Sınırı - 0.2): Yeni stratejinin eski stratejiden en fazla
-    #   %20 farklılaşmasına izin verir. Bu PPO'nun en büyük güvenlik kilididir.
-    #
-    # ent_coef (Merak / Keşif Oranı - 0.01): Robotun rastgele yeni hareketler deneme
-    #   istegi. Baştan yüksek merakla yeni şeyler keşfeder.
-    # -------------------------------------------------------------
+    # 3. Mevcut Model Kontrolü (Devam Etme / Sıfırdan Başlama)
+    force_scratch = "--scratch" in sys.argv or "--reset" in sys.argv
+    latest_model_path = None
+    
+    if not force_scratch:
+        interrupted_path = os.path.join(models_dir, "interrupted_model.zip")
+        best_path = os.path.join(models_dir, "best_model.zip")
+        
+        if os.path.exists(interrupted_path):
+            latest_model_path = interrupted_path
+        elif os.path.exists(best_path):
+            latest_model_path = best_path
+        else:
+            checkpoints = [f for f in os.listdir(models_dir) if f.startswith("robot_ppo_model_") and f.endswith(".zip")]
+            if checkpoints:
+                # En yüksek adım sayısına sahip checkpoint'i bul
+                checkpoints.sort(key=lambda x: int(x.split("_")[3]) if len(x.split("_")) > 3 and x.split("_")[3].isdigit() else 0)
+                latest_model_path = os.path.join(models_dir, checkpoints[-1])
 
     policy_kwargs = dict(
         net_arch=dict(pi=[128, 128], vf=[128, 128])  # 2 Gizli katman, 128'er nöron
     )
 
-    model = PPO(
-        policy="MlpPolicy",
-        env=env,
-        learning_rate=3e-4,
-        n_steps=1024,
-        batch_size=64,
-        n_epochs=10,
-        gamma=0.99,
-        gae_lambda=0.95,
-        clip_range=0.2,
-        ent_coef=0.01,
-        verbose=0,
-        tensorboard_log=logs_dir,
-        policy_kwargs=policy_kwargs,
-        device="cpu"  # Hızlı ve stabil CPU hesaplaması
-    )
+    if latest_model_path and os.path.exists(latest_model_path):
+        print(f"🔄 Önceki eğitimden model bulundu! Kaldığı yerden devam ediliyor:")
+        print(f"   📂 Yüklenen: {latest_model_path}\n")
+        model = PPO.load(
+            latest_model_path,
+            env=env,
+            learning_rate=3e-4,
+            n_steps=1024,
+            batch_size=64,
+            n_epochs=10,
+            gamma=0.99,
+            gae_lambda=0.95,
+            clip_range=0.2,
+            ent_coef=0.01,
+            tensorboard_log=logs_dir,
+            device="cpu"
+        )
+    else:
+        print("🌱 Sıfırdan yeni yapay zeka ağı kuruluyor...")
+        model = PPO(
+            policy="MlpPolicy",
+            env=env,
+            learning_rate=3e-4,
+            n_steps=1024,
+            batch_size=64,
+            n_epochs=10,
+            gamma=0.99,
+            gae_lambda=0.95,
+            clip_range=0.2,
+            ent_coef=0.01,
+            verbose=0,
+            tensorboard_log=logs_dir,
+            policy_kwargs=policy_kwargs,
+            device="cpu"  # Hızlı ve stabil CPU hesaplaması
+        )
 
     # 4. Ara Kayıt (Checkpoint) Callback'i
     checkpoint_callback = CheckpointCallback(
@@ -109,11 +122,11 @@ def main():
 
     visual_callback = TrainingVisualLogger()
 
-    # Toplam Eğitim Adımı: 50.000 adım (Yaklaşık 15-20 dakika)
+    # Toplam Eğitim Adımı: 50.000 adım
     TOTAL_TIMESTEPS = 50_000
 
-    print("🧠 Yapay Zeka Ağı Kuruldu.")
-    print(f"🎯 Toplam Eğitim Adımı : {TOTAL_TIMESTEPS}")
+    print("🧠 Yapay Zeka Ağı Hazır.")
+    print(f"🎯 Toplam Hedef Adım : {TOTAL_TIMESTEPS}")
     print("-" * 65)
     print("CANLI EĞİTİM BAŞLADI (Durdurmak için Ctrl+C yapabilirsiniz):\n")
 
@@ -121,7 +134,8 @@ def main():
         model.learn(
             total_timesteps=TOTAL_TIMESTEPS,
             callback=[checkpoint_callback, visual_callback],
-            progress_bar=True
+            progress_bar=True,
+            reset_num_timesteps=False
         )
         
         # En son modeli kaydet
@@ -132,10 +146,12 @@ def main():
         print("=" * 65)
 
     except KeyboardInterrupt:
-        print("\n⚠️ Eğitim kullanıcı tarafından durduruldu. Mevcut model kaydediliyor...")
+        print("\n⚠️ Eğitim durduruldu. Mevcut model güvenle kaydediliyor...")
         final_model_path = os.path.join(models_dir, "interrupted_model.zip")
         model.save(final_model_path)
-        print(f"💾 Model kaydedildi: {final_model_path}")
+        best_model_path = os.path.join(models_dir, "best_model.zip")
+        model.save(best_model_path)
+        print(f"💾 Model kaydedildi: {final_model_path} ve {best_model_path}")
     finally:
         env.close()
 

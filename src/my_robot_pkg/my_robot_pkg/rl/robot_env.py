@@ -16,6 +16,7 @@ import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Range
 from nav_msgs.msg import Odometry
+from std_msgs.msg import Empty
 from geometry_msgs.msg import Twist, PoseStamped
 
 class RobotEnv(gym.Env):
@@ -59,12 +60,12 @@ class RobotEnv(gym.Env):
         # ==========================================================
         self.REWARD_GOAL_REACHED = 100.0   # Hedefe varınca verilecek büyük ödül
         self.PENALTY_COLLISION   = -60.0   # Duvara/engele çarpma cezası
-        self.PENALTY_STEP        = -0.05   # Her adımda verilen küçük zaman cezası (hızlı gitmeyi teşvik eder)
-        self.REWARD_APPROACH_MUL = 8.0     # Hedefe her yaklaştığı cm başına verilen ödül çarpanı
+        self.PENALTY_STEP        = -0.05   # Her adımda verilen küçük zaman cezası
+        self.REWARD_APPROACH_MUL = 8.0     # Hedefe yaklaştığı cm başına verilen ödül çarpanı
 
         # Güvenlik ve Mesafe Eşikleri
         self.COLLISION_DISTANCE = 0.15     # 15 cm'den az kalırsa ÇARPIŞMA say
-        self.GOAL_REACH_DISTANCE = 0.20    # Hedefe 20 cm yaklaşırsa BAŞARILI say
+        self.GOAL_REACH_DISTANCE = 0.22    # Hedefe 22 cm yaklaşırsa BAŞARILI say
 
         # Robot ve Hedef Durumları
         self.robot_x = 0.0
@@ -96,6 +97,7 @@ class RobotEnv(gym.Env):
 
         # Yayıncılar
         self.cmd_pub = self.node.create_publisher(Twist, '/cmd_vel', 10)
+        self.reset_pub = self.node.create_publisher(Empty, '/robot/reset', 10)
         self.goal_pub = self.node.create_publisher(PoseStamped, '/goal_pose', 10)
 
     def _front_cb(self, msg: Range):
@@ -118,23 +120,19 @@ class RobotEnv(gym.Env):
         self.robot_yaw = math.atan2(2.0 * (qw * qz), 1.0 - 2.0 * (qz * qz))
 
     def _get_obs(self):
-        # 1. Hedefe olan mesafe
         dx = self.goal_x - self.robot_x
         dy = self.goal_y - self.robot_y
         dist_to_goal = math.sqrt(dx * dx + dy * dy)
 
-        # 2. Hedefe olan açı farkı (Robotun baktığı yön ile hedefin açısı)
         target_angle = math.atan2(dy, dx)
         angle_diff = target_angle - self.robot_yaw
-        # Açı farkını [-pi, pi] aralığına normalize et
         angle_diff = math.atan2(math.sin(angle_diff), math.cos(angle_diff))
 
-        # Sonar mesafelerini [0.0, 1.0] aralığına normalize et
         obs = np.array([
-            self.front_dist / 4.0,
-            self.left_dist / 4.0,
-            self.back_dist / 4.0,
-            self.right_dist / 4.0,
+            min(1.0, self.front_dist / 4.0),
+            min(1.0, self.left_dist / 4.0),
+            min(1.0, self.back_dist / 4.0),
+            min(1.0, self.right_dist / 4.0),
             dist_to_goal,
             angle_diff
         ], dtype=np.float32)
@@ -142,23 +140,27 @@ class RobotEnv(gym.Env):
         return obs, dist_to_goal, angle_diff
 
     def _spin_ros(self):
-        # ROS 2 mesajlarını işle
-        for _ in range(3):
+        for _ in range(4):
             rclpy.spin_once(self.node, timeout_sec=0.01)
 
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
         self.step_count = 0
 
-        # Robotu durdur
-        twist = Twist()
-        self.cmd_pub.publish(twist)
+        # 1. Robotu sıfırla / başlangıç güvenli noktaya ışınla
+        self.reset_pub.publish(Empty())
+        time.sleep(0.04)
         self._spin_ros()
 
-        # Harita içinde rastgele yeni bir hedef seç
-        # (Arena 5x5m olduğundan [-1.8, 1.8] güvenli alanda hedef seçiyoruz)
-        self.goal_x = random.uniform(-1.6, 1.6)
-        self.goal_y = random.uniform(-1.6, 1.6)
+        # 2. Harita içinde rastgele yeni bir hedef seç
+        # (Merkezden en az 0.6m uzakta, 1.8m içeride)
+        while True:
+            gx = random.uniform(-1.6, 1.6)
+            gy = random.uniform(-1.6, 1.6)
+            if math.sqrt(gx * gx + gy * gy) > 0.5:
+                self.goal_x = gx
+                self.goal_y = gy
+                break
 
         # Hedefi RViz'e yayınla
         goal_msg = PoseStamped()
@@ -177,7 +179,6 @@ class RobotEnv(gym.Env):
     def step(self, action):
         self.step_count += 1
 
-        # 1. Yapay zekanın seçtiği aksiyonu motorlara gönder
         v = float(action[0])
         w = float(action[1])
 
@@ -186,43 +187,39 @@ class RobotEnv(gym.Env):
         twist.angular.z = w
         self.cmd_pub.publish(twist)
 
-        # Simülasyonun adım atması için kısa bekleme ve ROS güncellemesi (100ms)
-        time.sleep(0.08)
+        # Simülasyonun adım atması için kısa bekleme (60ms)
+        time.sleep(0.06)
         self._spin_ros()
 
-        # 2. Yeni gözlemleri al
         obs, dist_to_goal, angle_diff = self._get_obs()
 
-        # 3. Ödül Hesaplama
-        # Yaklaşma Ödülü: Önceki adıma göre hedefe yaklaştıysa pozitif, uzaklaştıysa negatif
+        # Yaklaşma Ödülü
         approach_reward = (self.prev_distance_to_goal - dist_to_goal) * self.REWARD_APPROACH_MUL
         self.prev_distance_to_goal = dist_to_goal
 
         reward = approach_reward + self.PENALTY_STEP
 
-        # Açı hizalama bonusu (hedefe doğru bakıyorsa küçük ekstra ödül)
-        if abs(angle_diff) < 0.3:
-            reward += 0.1
+        # Açı hizalama bonusu
+        if abs(angle_diff) < 0.35 and v > 0.05:
+            reward += 0.15
 
         terminated = False
         truncated = False
 
-        # 4. Çarpışma Kontrolü (4 Sonardan herhangi biri limite değerse)
+        # Çarpışma Kontrolü
         min_sonar = min(self.front_dist, self.left_dist, self.right_dist, self.back_dist)
         if min_sonar < self.COLLISION_DISTANCE:
-            # Çarpışma oldu!
             reward += self.PENALTY_COLLISION
             terminated = True
             self.stop()
 
-        # 5. Hedefe Ulaşma Kontrolü
+        # Hedefe Ulaşma Kontrolü
         elif dist_to_goal < self.GOAL_REACH_DISTANCE:
-            # Başarıyla hedefe ulaştı!
             reward += self.REWARD_GOAL_REACHED
             terminated = True
             self.stop()
 
-        # 6. Zaman Aşımı Kontrolü
+        # Zaman Aşımı Kontrolü
         if self.step_count >= self.max_steps_per_episode:
             truncated = True
             self.stop()
