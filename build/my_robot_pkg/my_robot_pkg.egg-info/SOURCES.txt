@@ -7,10 +7,15 @@ setup.py
 ../../build/my_robot_pkg/my_robot_pkg.egg-info/requires.txt
 ../../build/my_robot_pkg/my_robot_pkg.egg-info/top_level.txt
 ../../build/my_robot_pkg/my_robot_pkg.egg-info/zip-safe
+config/slam_toolbox_params.yaml
+launch/mapping_launch.py
+launch/navigation_launch.py
 launch/robot_launch.py
 my_robot_pkg/__init__.py
+my_robot_pkg/explorer_node.py
 my_robot_pkg/my_robot_driver.py
 my_robot_pkg/py.typed
+my_robot_pkg/save_map.py
 my_robot_pkg/sonar_to_scan.py
 my_robot_pkg/teleop.py
 my_robot_pkg.egg-info/PKG-INFO
@@ -20,6 +25,10 @@ my_robot_pkg.egg-info/entry_points.txt
 my_robot_pkg.egg-info/requires.txt
 my_robot_pkg.egg-info/top_level.txt
 my_robot_pkg.egg-info/zip-safe
+my_robot_pkg/rl/__init__.py
+my_robot_pkg/rl/evaluate_rl.py
+my_robot_pkg/rl/robot_env.py
+my_robot_pkg/rl/train_rl.py
 resource/my_robot.urdf
 resource/my_robot_pkg
 rviz/robot_view.rviz

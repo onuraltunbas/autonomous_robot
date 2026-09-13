@@ -5,16 +5,37 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /Map1
         - /Grid1
         - /TF1
         - /LaserScan1
-        - /Odometry1
-        - /Image1
+        - /Robot Pose (Odometry)1
+        - /Camera View1
       Splitter Ratio: 0.5
     Tree Height: 600
 Visualization Manager:
   Class: ""
   Displays:
+    - Alpha: 0.7
+      Class: rviz_default_plugins/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic:
+        Depth: 5
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /map
+      Update Topic:
+        Depth: 5
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /map_updates
+      Use Timestamp: false
+      Value: true
     - Alpha: 0.5
       Cell Size: 0.5
       Class: rviz_default_plugins/Grid
@@ -38,9 +59,9 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
-      Marker Scale: 0.3
+      Marker Scale: 0.2
       Name: TF
-      Show Arrows: true
+      Show Arrows: false
       Show Axes: true
       Show Names: true
       Tree:
@@ -85,16 +106,16 @@ Visualization Manager:
       Class: rviz_default_plugins/Odometry
       Color: 0; 255; 0
       Enabled: true
-      Head Length: 0.1
-      Head Radius: 0.05
-      Keep: 100
-      Length: 0.3
-      Name: Odometry
+      Head Length: 0.08
+      Head Radius: 0.04
+      Keep: 1
+      Length: 0.25
+      Name: Robot Pose (Odometry)
       Position Tolerance: 0.1
-      Radius: 0.02
+      Radius: 0.015
       Shaft Length: 0.2
-      Shaft Radius: 0.02
-      Shape: Axes
+      Shaft Radius: 0.015
+      Shape: Arrow
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -107,7 +128,7 @@ Visualization Manager:
       Max Value: 1
       Median window: 5
       Min Value: 0
-      Name: Image
+      Name: Camera View
       Normalize Range: false
       Queue Size: 2
       Topic:

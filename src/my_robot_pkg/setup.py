@@ -16,6 +16,8 @@ setup(
         (os.path.join('share', package_name, 'worlds'), glob('worlds/*.wbt')),
         (os.path.join('share', package_name, 'resource'), glob('resource/*.urdf')),
         (os.path.join('share', package_name, 'rviz'), glob('rviz/*.rviz')),
+        (os.path.join('share', package_name, 'config'), glob('config/*.yaml')),
+        (os.path.join('share', package_name, 'maps'), glob('maps/*')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -28,6 +30,10 @@ setup(
         'console_scripts': [
             'teleop = my_robot_pkg.teleop:main',
             'sonar_to_scan = my_robot_pkg.sonar_to_scan:main',
+            'explorer_node = my_robot_pkg.explorer_node:main',
+            'save_map = my_robot_pkg.save_map:main',
+            'train_rl = my_robot_pkg.rl.train_rl:main',
+            'evaluate_rl = my_robot_pkg.rl.evaluate_rl:main',
         ],
     },
 )
